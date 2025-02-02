@@ -96,7 +96,7 @@ const Settings = () => {
                         <div className="flex-1">
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">وضع الصيانة</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
@@ -107,7 +107,7 @@ const Settings = () => {
                         <div className="flex-1">
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت التقييم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
@@ -118,7 +118,7 @@ const Settings = () => {
                         <div className="flex-1">
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت الموظفين</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>

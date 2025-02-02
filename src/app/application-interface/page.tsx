@@ -75,6 +75,7 @@ const ApplicationInterface = () => {
 
                             {/* EndPoints */}
                             <TabsContent value="endpoints">
+                                <Button className="btn-purple absolute -top-32">اضافة API جديد</Button>
                                 <div className="py-4">
                                     <Table>
                                         <TableHeader>
@@ -114,6 +115,7 @@ const ApplicationInterface = () => {
 
                             {/* Webhooks */}
                             <TabsContent value="weebhooks">
+                            <Button className="btn-purple absolute -top-32">اضافة Webhooks جديد</Button>
                                 <div className="py-4">
                                     <Table>
                                         <TableHeader>

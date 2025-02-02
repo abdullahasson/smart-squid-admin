@@ -402,7 +402,47 @@ export const marketingToolsOffers: MarketingToolsOffers[] = [
     }
 ]
 
+//  Marketing Tools / coupons
+export interface MarketingToolsCoupons {
+    coupons: string;
+    value: string;
+    usage: string;
+    endData: string;
+}
+export const marketingToolsCoupons: MarketingToolsCoupons[] = [
+    {
+        coupons: "D12DB",
+        value: "30%",
+        usage: "3",
+        endData: "30/12/2024"
+    },
+    {
+        coupons: "A12DB",
+        value: "50%",
+        usage: "5",
+        endData: "30/12/2024"
+    }
+]
 
+
+// Marketing Tools / advertising
+export interface MarketingToolsAdvertising {
+    name: string;
+    status: string;
+    goals: string;
+}
+export const marketingToolsAdvertising: MarketingToolsAdvertising[] = [
+    {
+        name: "D12DB",
+        status: "مكتملة",
+        goals: "زيارة الموقع"
+    },
+    {
+        name: "D12DB",
+        status: "نشطة",
+        goals: "تسجيل العملاء"
+    }
+]
 
 
 // Setting / domain

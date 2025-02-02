@@ -28,18 +28,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-import Link from "next/link"
-import { marketingToolsOffers } from "@/utils/data"
 
-import { MdStorefront } from "react-icons/md";
+import { marketingToolsOffers , marketingToolsCoupons , marketingToolsAdvertising } from "@/utils/data"
 
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+
 
 import {
     Tabs,
@@ -67,7 +59,7 @@ const MarketingTools = () => {
         <div className="flex-[4] p-9 flex flex-col gap-12">
             <div className="flex flex-col">
                 <div className="w-full mb-6">
-                    <h2 className="font-semibold text-xl">الاعدادات</h2>
+                    <h2 className="font-semibold text-xl">أدوات التسويق</h2>
                 </div>
 
 
@@ -75,24 +67,7 @@ const MarketingTools = () => {
                     <div className="table-head">
                         <div></div>
 
-                        <Breadcrumb>
-                            <BreadcrumbList>
-                                <BreadcrumbItem>
-                                    <BreadcrumbPage>
-                                        <div className="flex items-center gap-2">
-                                            <p className="text-[#5E4D9D] font-semibold text-sm">أدوات التسويق</p>
-                                            <MdStorefront className="text-2xl" fill="#5E4D9D" />
-                                        </div>
-                                    </BreadcrumbPage>
-                                </BreadcrumbItem>
-
-                                <BreadcrumbSeparator className="rotate-180" />
-
-                                <BreadcrumbItem>
-                                    <Link href="/settings">الاعدادات</Link>
-                                </BreadcrumbItem>
-                            </BreadcrumbList>
-                        </Breadcrumb>
+                        <h2 className="text-lg font-semibold">أدوات التسويق</h2>
                     </div>
 
                     <div>
@@ -107,6 +82,7 @@ const MarketingTools = () => {
 
                             {/* Offers */}
                             <TabsContent value="offers">
+                                <Button className="btn-purple absolute -top-32">اضافة عرض جديد</Button>
                                 <div className="flex flex-col gap-8 py-4">
                                     <Table>
                                         <TableHeader>
@@ -218,20 +194,20 @@ const MarketingTools = () => {
 
                             {/* Coupons */}
                             <TabsContent value="coupons">
+                                <Button className="btn-purple absolute -top-32">اضافة كوبون جديد</Button>
                                 <div className="flex flex-col gap-8 py-4">
                                     <Table>
                                         <TableHeader>
                                             <TableRow className="bg-gray-50">
                                                 <TableHead className="text-center font-semibold">الاجراءات</TableHead>
-                                                <TableHead className="text-center font-semibold">الفئة المستهدفة</TableHead>
-                                                <TableHead className="text-center font-semibold">تاريخ النهاية</TableHead>
-                                                <TableHead className="text-center font-semibold">تاريخ البداية</TableHead>
-                                                <TableHead className="text-center font-semibold">نوع الخصم</TableHead>
-                                                <TableHead className="text-center font-semibold">اسم العرض</TableHead>
+                                                <TableHead className="text-center font-semibold">تاريخ الأنتهاء</TableHead>
+                                                <TableHead className="text-center font-semibold">عدد مرات الأستخدام</TableHead>
+                                                <TableHead className="text-center font-semibold">قيمة الخصم</TableHead>
+                                                <TableHead className="text-center font-semibold">رمز الكوبون</TableHead>
                                             </TableRow>
                                         </TableHeader>
                                         <TableBody>
-                                            {marketingToolsOffers.map((invoice, index: number) => (
+                                            {marketingToolsCoupons.map((invoice, index: number) => (
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
@@ -243,11 +219,10 @@ const MarketingTools = () => {
                                                             </Button>
                                                         </div>
                                                     </TableCell>
-                                                    <TableCell className="text-center">{invoice.targetGroup}</TableCell>
-                                                    <TableCell className="text-center">{invoice.endDate}</TableCell>
-                                                    <TableCell className="text-center">{invoice.startDate}</TableCell>
-                                                    <TableCell className="text-center">{invoice.discountType}</TableCell>
-                                                    <TableCell className="text-center">{invoice.offerName}</TableCell>
+                                                    <TableCell className="text-center">{invoice.endData}</TableCell>
+                                                    <TableCell className="text-center">{invoice.usage}</TableCell>
+                                                    <TableCell className="text-center">{invoice.value}</TableCell>
+                                                    <TableCell className="text-center">{invoice.coupons}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -329,20 +304,19 @@ const MarketingTools = () => {
 
                             {/* Advertising */}
                             <TabsContent value="advertising">
+                                <Button className="btn-purple absolute -top-32">اضافة حملة اعلانية جديدة</Button>
                                 <div className="flex flex-col gap-4 py-6">
                                     <Table>
                                         <TableHeader>
                                             <TableRow className="bg-gray-50">
                                                 <TableHead className="text-center font-semibold">الاجراءات</TableHead>
-                                                <TableHead className="text-center font-semibold">الفئة المستهدفة</TableHead>
-                                                <TableHead className="text-center font-semibold">تاريخ النهاية</TableHead>
-                                                <TableHead className="text-center font-semibold">تاريخ البداية</TableHead>
-                                                <TableHead className="text-center font-semibold">نوع الخصم</TableHead>
-                                                <TableHead className="text-center font-semibold">اسم العرض</TableHead>
+                                                <TableHead className="text-center font-semibold">الأهداف المحققة</TableHead>
+                                                <TableHead className="text-center font-semibold">الحالة</TableHead>
+                                                <TableHead className="text-center font-semibold">اسم الحملة</TableHead>
                                             </TableRow>
                                         </TableHeader>
                                         <TableBody>
-                                            {marketingToolsOffers.map((invoice, index: number) => (
+                                            {marketingToolsAdvertising.map((invoice, index: number) => (
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
@@ -354,11 +328,9 @@ const MarketingTools = () => {
                                                             </Button>
                                                         </div>
                                                     </TableCell>
-                                                    <TableCell className="text-center">{invoice.targetGroup}</TableCell>
-                                                    <TableCell className="text-center">{invoice.endDate}</TableCell>
-                                                    <TableCell className="text-center">{invoice.startDate}</TableCell>
-                                                    <TableCell className="text-center">{invoice.discountType}</TableCell>
-                                                    <TableCell className="text-center">{invoice.offerName}</TableCell>
+                                                    <TableCell className="text-center">{invoice.goals}</TableCell>
+                                                    <TableCell className="text-center">{invoice.status}</TableCell>
+                                                    <TableCell className="text-center">{invoice.name}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
