@@ -1,5 +1,7 @@
 "use client"
 import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 import {
     Card,
     CardContent,
@@ -29,7 +31,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 
-import { marketingToolsOffers , marketingToolsCoupons , marketingToolsAdvertising } from "@/utils/data"
+import { marketingToolsOffers, marketingToolsCoupons, marketingToolsAdvertising } from "@/utils/data"
 
 
 
@@ -101,10 +103,12 @@ const MarketingTools = () => {
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
                                                             <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                                                حذف
+                                                                <span>حذف</span>
+                                                                <AiOutlineDelete />
                                                             </Button>
                                                             <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                                                تعديل
+                                                                <span>تعديل</span>
+                                                                <FiEdit />
                                                             </Button>
                                                         </div>
                                                     </TableCell>
@@ -212,10 +216,12 @@ const MarketingTools = () => {
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
                                                             <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                                                حذف
+                                                                <span>حذف</span>
+                                                                <AiOutlineDelete />
                                                             </Button>
                                                             <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                                                تعديل
+                                                                <span>تعديل</span>
+                                                                <FiEdit />
                                                             </Button>
                                                         </div>
                                                     </TableCell>
@@ -321,10 +327,12 @@ const MarketingTools = () => {
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
                                                             <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                                                حذف
+                                                                <span>حذف</span>
+                                                                <AiOutlineDelete />
                                                             </Button>
                                                             <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                                                تعديل
+                                                                <span>تعديل</span>
+                                                                <FiEdit />
                                                             </Button>
                                                         </div>
                                                     </TableCell>

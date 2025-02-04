@@ -6,8 +6,8 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+// import { Input } from "@/components/ui/input"
+// import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 
 
@@ -20,8 +20,7 @@ const EditeOnMeeting = () => {
                 </Button>
             </DialogTrigger>
 
-
-            <DialogContent className="border-none sm:min-w-[600px] sm:px-0 sm:py-0 flex flex-col gap-4 p-5 sm:rounded-3xl overflow-hidden shadow-xl">
+            {/* <DialogContent className="border-none sm:min-w-[600px] sm:px-0 sm:py-0 flex flex-col gap-4 p-5 sm:rounded-3xl overflow-hidden shadow-xl">
                 <DialogHeader className="h-20 flex items-center justify-center">
                     <DialogTitle>
                         تعديل الأجتماع
@@ -56,6 +55,15 @@ const EditeOnMeeting = () => {
                     <Button className="btn-orange-t w-48">الغاء</Button>
                     
                     <Button className="btn-orange w-48">حفظ</Button>
+                </DialogFooter>
+            </DialogContent> */}
+
+            <DialogContent>
+                <DialogHeader>
+                    <DialogTitle>
+                    </DialogTitle>
+                </DialogHeader>
+                <DialogFooter>
                 </DialogFooter>
             </DialogContent>
         </Dialog>

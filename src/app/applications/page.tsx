@@ -39,22 +39,22 @@ const AdminApplications = () => {
 
                         <div className="flex flex-wrap justify-between gap-4 mt-5">
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <div><IoIosOptions /></div>
+                                <button className="btn-icon"><IoIosOptions /></button>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <div><IoIosOptions /></div>
+                                <button className="btn-icon"><IoIosOptions /></button>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <div><IoIosOptions /></div>
+                                <button className="btn-icon"><IoIosOptions /></button>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <div><IoIosOptions /></div>
+                                <button className="btn-icon"><IoIosOptions /></button>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>

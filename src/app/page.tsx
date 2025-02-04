@@ -2,7 +2,7 @@
 import Overview from "@/components/Overview";
 import Totalsales from "@/components/TotalSales";
 import MonthlyTarget from "@/components/MonthlyTarget";
-import DailyMeetings from "@/components/DailyMeetings";
+// import DailyMeetings from "@/components/DailyMeetings";
 // fake data
 import { overview } from "@/utils/data"
 
@@ -60,9 +60,9 @@ const Home = () => {
                 <Totalsales />
             </div>
 
-            <div>
+            {/* <div>
                 <DailyMeetings />
-            </div>
+            </div> */}
 
             <div>
                 <MonthlyTarget />

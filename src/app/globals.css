@@ -93,6 +93,21 @@ html {
   @apply rounded-md text-[#C74D0A] border border-[#C74D0A] bg-white py-2 px-6 text-center;
 }
 
+.icon-btn {
+  @apply p-2 
+  rounded-full
+  transition-colors 
+  duration-200 
+  focus:outline-none 
+  focus:ring-2 
+  focus:ring-offset-2 
+  focus:ring-indigo-500
+  hover:bg-gray-100 
+  active:bg-gray-200 
+  disabled:opacity-50 
+  disabled:cursor-not-allowed 
+}
+
 
 /* Table Style */
 .table-container {

@@ -1,8 +1,10 @@
 import Link from "next/link"
 import { clients } from "@/utils/data";
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
-import EditeOnMeeting from "@/components/EditeOnMeeting";
-import DeleteClient from "@/components/DeleteClient";
+// import EditeOnMeeting from "@/components/EditeOnMeeting";
+// import DeleteClient from "@/components/DeleteClient";
 
 import {
     Table,
@@ -66,9 +68,14 @@ const AdminClients = () => {
                                 <TableRow key={index}>
                                     <TableCell>
                                         <div className="flex items-center justify-center gap-2">
-                                            <DeleteClient />
-
-                                            <EditeOnMeeting />
+                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                <span>حذف</span>
+                                                <AiOutlineDelete />
+                                            </Button>
+                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                <span>تعديل</span>
+                                                <FiEdit />
+                                            </Button>
 
                                             <Link href="/admin/clients/details" className="text-[#C74D0A] underline font-semibold">
                                                 عرض التفاصيل

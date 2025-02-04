@@ -1,4 +1,6 @@
 import { products } from "@/utils/data"
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
 import {
     Table,
@@ -56,10 +58,12 @@ const Products = () => {
                                 <TableRow key={index}>
                                     <TableCell className="flex items-center justify-center gap-2">
                                         <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                            حذف
+                                            <span>حذف</span>
+                                            <AiOutlineDelete />
                                         </Button>
                                         <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                            تعديل
+                                            <span>تعديل</span>
+                                            <FiEdit />
                                         </Button>
                                     </TableCell>
                                     <TableCell className="text-center">{invoice.productStatus}</TableCell>

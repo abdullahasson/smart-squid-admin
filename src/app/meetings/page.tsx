@@ -1,13 +1,13 @@
 import { meetings } from "@/utils/data"
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
-import EditeOnMeeting from "@/components/EditeOnMeeting";
+// import EditeOnMeeting from "@/components/EditeOnMeeting";
 
 import {
     Table,
     TableBody,
-
     TableCell,
-
     TableHead,
     TableHeader,
     TableRow,
@@ -42,8 +42,8 @@ const Meetings = () => {
                 <div className="table-container">
                     <div className="table-head">
                         <div className="flex items-center gap-3">
-                            <div className="text-[#C74D0A] border border-[#C74D0A] bg-white py-2 px-5 rounded-xl">نوع العميل</div>
-                            <div className="text-[#C74D0A] border border-[#C74D0A] bg-white py-2 px-5 rounded-xl">موعدها</div>
+                            <Button className="text-[#C74D0A] border border-[#C74D0A] bg-white font-semibold px-5 hover:bg-[#C74D0A] transition-all hover:text-white">نوع العميل</Button>
+                            <Button className="text-[#C74D0A] border border-[#C74D0A] bg-white font-semibold px-5 hover:bg-[#C74D0A] transition-all hover:text-white">موعدها</Button>
                             <Label className="text-[#C74D0A] font-semibold">تصنيف الاجتماعات حسب</Label>
                         </div>
 
@@ -64,15 +64,20 @@ const Meetings = () => {
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {meetings.map((invoice , index: number) => (
+                            {meetings.map((invoice, index: number) => (
                                 <TableRow key={index}>
                                     <TableCell>
                                         <div className="flex items-center justify-center gap-2">
                                             <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                                حذف
+                                                <span>حذف</span>
+                                                <AiOutlineDelete />
+                                            </Button>
+                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                <span>تعديل</span>
+                                                <FiEdit />
                                             </Button>
 
-                                            <EditeOnMeeting />
+                                            {/* <EditeOnMeeting /> */}
                                         </div>
                                     </TableCell>
                                     <TableCell className="text-center">{invoice.phone}</TableCell>

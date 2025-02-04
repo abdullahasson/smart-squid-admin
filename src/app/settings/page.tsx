@@ -13,7 +13,7 @@ const Settings = () => {
                 <div className="w-full bg-white rounded-lg shadow-sm py-16 px-10 flex flex-wrap gap-12 column-2">
                     <div className="flex-1 flex-col flex gap-5">
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/design">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/a">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -24,7 +24,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/b">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -35,7 +35,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/c">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -46,7 +46,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/e">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -57,7 +57,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/d">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
