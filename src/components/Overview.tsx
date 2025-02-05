@@ -1,11 +1,11 @@
 "use client"
 import React from "react"
 import { Area, AreaChart } from "recharts"
+import { FaArrowDown , FaArrowUp } from "react-icons/fa6";
 
 import {
     ChartConfig,
     ChartContainer,
-
 } from "@/components/ui/chart";
 
 
@@ -41,10 +41,11 @@ const Overview: React.FC<OverviewProps> = ({ text, percentage, value, chartData 
                     {value}
                 </h1>
 
-                <p className="text-sm text-[#7E84A3] flex items-center justify-end gap-3">
+                <p className="text-sm text-[#7E84A3] flex items-center justify-end gap-2 w-full">
                     <span>من العام الماضي</span>
                     {" "}
-                    <span className={`text-[${percentage >= 2 ? "#3DD598" : "#ccc"}] font-bold`}>
+                    <span className={`font-bold flex items-center justify-center gap-[2px] ${percentage >= 2 ? "text-[#3DD598]" : "text-[#F0142F]"}`}>
+                        {percentage >= 2 ? (<FaArrowUp />) : (<FaArrowDown />)}
                         {percentage}%
                     </span>
                 </p>

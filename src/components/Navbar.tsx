@@ -2,11 +2,12 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { IoHomeOutline , IoPerson } from "react-icons/io5";
+import { IoHomeOutline, IoPerson } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
 import { LuLogOut } from "react-icons/lu";
 import { CiSettings } from "react-icons/ci";
 import { MdOutlineAppShortcut } from "react-icons/md";
+import { Badge } from "@/components/ui/badge";
 
 const Navbar = () => {
 
@@ -14,25 +15,25 @@ const Navbar = () => {
 
   const navLinks = [
     // ready pages: meetings / orders / clients / products / settings-design /
-    { name: "الرئيسية", href: "/"  , icon: <IoHomeOutline />},
-    { name: "الاجتماعات", href: "/meetings"  , icon: <IoPerson />},
-    { name: "الطلبات", href: "/orders"  , icon: <IoHomeOutline />},
-    { name: "العملاء", href: "/clients"  , icon: <IoIosPeople />},
-    { name: "التقارير", href: "/reports"  , icon: <IoHomeOutline />},
-    { name: "التطبيقات", href: "/applications"  , icon: <MdOutlineAppShortcut />},
-    { name: "المنتجات", href: "/products"  , icon: <IoHomeOutline />},
-    { name: "API واجهة التطبيقات", href: "/application-interface"  , icon: <IoHomeOutline />},
-    { name: "الأدوات التسويقية", href: "/marketing-tools"  , icon: <IoHomeOutline />},
-    { name: "الأعدادات", href: "/settings"  , icon: <CiSettings />},
-    { name: "تسجيل الخروج", href: "/logout"  , icon: <LuLogOut />},
+    { name: "الرئيسية", href: "/", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "الاجتماعات", href: "/meetings", icon: <IoPerson /> , notigaction: 0 },
+    { name: "الطلبات", href: "/orders", icon: <IoHomeOutline /> , notigaction: 12 },
+    { name: "العملاء", href: "/clients", icon: <IoIosPeople /> , notigaction: 0 },
+    { name: "التقارير", href: "/reports", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "التطبيقات", href: "/applications", icon: <MdOutlineAppShortcut /> , notigaction: 0 },
+    { name: "المنتجات", href: "/products", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "API واجهة التطبيقات", href: "/application-interface", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "الأدوات التسويقية", href: "/marketing-tools", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "الأعدادات", href: "/settings", icon: <CiSettings /> , notigaction: 0 },
+    { name: "تسجيل الخروج", href: "/logout", icon: <LuLogOut /> , notigaction: 0 },
   ]
-// style={{clipPath : "polygon(83% 0, 100% 0, 100% 100%, 83% 99%)"}}
+  // style={{clipPath : "polygon(83% 0, 100% 0, 100% 100%, 83% 99%)"}}
   return (
     <div className="flex-1 h-full relative" >
       <div className="py-4 bg-white h-screen">
         <ul>
           {
-            navLinks.map((link , index) => {
+            navLinks.map((link, index) => {
 
               const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/')
 
@@ -42,11 +43,10 @@ const Navbar = () => {
                     href={link.href}
                     className={`
                       flex 
-                      justify-end 
-                      font-semibold 
                       items-center
-                      gap-4
+                      justify-between
                       pr-4
+                      pl-2
                       py-3
                       w-full 
                       hover:bg-[#8977cc13] 
@@ -57,8 +57,13 @@ const Navbar = () => {
                       ${isActive ? "text-[#655c85] bg-[#8977cc13] border-[#5E4D9D]" : ""}
                     `}
                   >
-                  {link.name}
-                  {link.icon}
+
+                    {link.notigaction > 0 ? <Badge className="bg-[#C74D0A]">{link.notigaction}</Badge> : <div></div>}
+                    <div className="flex justify-end font-semibold items-center gap-4">
+                      {link.name}
+                      {link.icon}
+                    </div>
+
                   </Link>
                 </li>
               )

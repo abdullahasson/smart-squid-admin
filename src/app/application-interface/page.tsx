@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { applicationInterfacesEndPoints , applicationInterfacesWebhooks } from "@/utils/data"
+import { applicationInterfacesEndPoints, applicationInterfacesWebhooks } from "@/utils/data"
 
 import { MdStorefront } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
@@ -95,11 +95,11 @@ const ApplicationInterface = () => {
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
-                                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                            <Button className="btn-delete">
                                                                 <span>حذف</span>
                                                                 <AiOutlineDelete />
                                                             </Button>
-                                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                            <Button className="btn-edit">
                                                                 <span>تعديل</span>
                                                                 <FiEdit />
                                                             </Button>
@@ -119,7 +119,7 @@ const ApplicationInterface = () => {
 
                             {/* Webhooks */}
                             <TabsContent value="weebhooks">
-                            <Button className="btn-purple absolute -top-32">اضافة Webhooks جديد</Button>
+                                <Button className="btn-purple absolute -top-32">اضافة Webhooks جديد</Button>
                                 <div className="py-4">
                                     <Table>
                                         <TableHeader>

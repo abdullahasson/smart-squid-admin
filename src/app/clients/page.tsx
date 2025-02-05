@@ -68,11 +68,12 @@ const AdminClients = () => {
                                 <TableRow key={index}>
                                     <TableCell>
                                         <div className="flex items-center justify-center gap-2">
-                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+
+                                            <Button className="btn-delete">
                                                 <span>حذف</span>
                                                 <AiOutlineDelete />
                                             </Button>
-                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                            <Button className="btn-edit">
                                                 <span>تعديل</span>
                                                 <FiEdit />
                                             </Button>

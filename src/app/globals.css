@@ -93,6 +93,14 @@ html {
   @apply rounded-md text-[#C74D0A] border border-[#C74D0A] bg-white py-2 px-6 text-center;
 }
 
+.btn-edit {
+  @apply bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white
+}
+
+.btn-delete {
+  @apply bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white
+}
+
 .icon-btn {
   @apply p-2 
   rounded-full

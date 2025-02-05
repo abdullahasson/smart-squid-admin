@@ -1,34 +1,34 @@
 "use client"
-import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts"
+// import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts"
 import { FiEdit } from "react-icons/fi";
 import { AiOutlineDelete } from "react-icons/ai";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import {
-    ChartConfig,
-    ChartContainer,
-    ChartTooltip,
-    ChartTooltipContent,
-} from "@/components/ui/chart"
-const chartData = [
-    { month: "January", desktop: 186 },
-    { month: "February", desktop: 305 },
-    { month: "March", desktop: 237 },
-    { month: "April", desktop: 73 },
-    { month: "May", desktop: 209 },
-    { month: "June", desktop: 214 },
-]
-const chartConfig = {
-    desktop: {
-        label: "Desktop",
-        color: "hsl(var(--chart-1))",
-    },
-} satisfies ChartConfig
+// import {
+//     Card,
+//     CardContent,
+//     CardDescription,
+//     CardHeader,
+//     CardTitle,
+// } from "@/components/ui/card"
+// import {
+    // ChartConfig,
+    // ChartContainer,
+    // ChartTooltip,
+    // ChartTooltipContent,
+// } from "@/components/ui/chart"
+// const chartData = [
+//     { month: "January", desktop: 186 },
+//     { month: "February", desktop: 305 },
+//     { month: "March", desktop: 237 },
+//     { month: "April", desktop: 73 },
+//     { month: "May", desktop: 209 },
+//     { month: "June", desktop: 214 },
+// ]
+// const chartConfig = {
+//     desktop: {
+//         label: "Desktop",
+//         color: "hsl(var(--chart-1))",
+//     },
+// } satisfies ChartConfig
 
 
 import { marketingToolsOffers, marketingToolsCoupons, marketingToolsAdvertising } from "@/utils/data"
@@ -102,11 +102,11 @@ const MarketingTools = () => {
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
-                                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                            <Button className="btn-delete">
                                                                 <span>حذف</span>
                                                                 <AiOutlineDelete />
                                                             </Button>
-                                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                            <Button className="btn-edit">
                                                                 <span>تعديل</span>
                                                                 <FiEdit />
                                                             </Button>
@@ -122,13 +122,13 @@ const MarketingTools = () => {
                                         </TableBody>
                                     </Table>
 
-                                    <div className="flex flex-col gap-4">
+                                    {/* <div className="flex flex-col gap-4">
                                         <h2 className="text-[#5E4D9D]">إحصائيات استخدام العروض</h2>
                                         <div className="flex justify-center gap-5 flex-row-reverse">
                                             <Card className="flex-1 bg-[#F8F7FD]">
                                                 <CardHeader>
                                                     <CardTitle>نسبةالمبيعات الناتجة</CardTitle>
-                                                    {/* <CardDescription>January - June 2024</CardDescription> */}
+                                                    <CardDescription>January - June 2024</CardDescription>
                                                 </CardHeader>
                                                 <CardContent>
                                                     <ChartContainer config={chartConfig}>
@@ -192,6 +192,10 @@ const MarketingTools = () => {
 
                                             <div className="flex-1"></div>
                                         </div>
+                                    </div> */}
+
+                                    <div className="flex justify-end gap-8 items-center">
+
                                     </div>
                                 </div>
                             </TabsContent>
@@ -215,11 +219,11 @@ const MarketingTools = () => {
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
-                                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                            <Button className="btn-delete">
                                                                 <span>حذف</span>
                                                                 <AiOutlineDelete />
                                                             </Button>
-                                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                            <Button className="btn-edit">
                                                                 <span>تعديل</span>
                                                                 <FiEdit />
                                                             </Button>
@@ -234,7 +238,7 @@ const MarketingTools = () => {
                                         </TableBody>
                                     </Table>
 
-                                    <div className="flex flex-col gap-4">
+                                    {/* <div className="flex flex-col gap-4">
                                         <h2 className="text-[#5E4D9D] text-xl">إحصائيات استخدام العروض</h2>
                                         <div className="flex justify-center gap-5 flex-row-reverse">
                                             <Card className="flex-1 bg-[#F8F7FD] pb-0 pt-6">
@@ -304,6 +308,9 @@ const MarketingTools = () => {
 
                                             <div className="flex-1"></div>
                                         </div>
+                                    </div> */}
+                                    <div className="flex justify-end gap-8 items-center">
+
                                     </div>
                                 </div>
                             </TabsContent>
@@ -311,7 +318,7 @@ const MarketingTools = () => {
                             {/* Advertising */}
                             <TabsContent value="advertising">
                                 <Button className="btn-purple absolute -top-32">اضافة حملة اعلانية جديدة</Button>
-                                <div className="flex flex-col gap-4 py-6">
+                                <div className="flex flex-col gap-8 py-4">
                                     <Table>
                                         <TableHeader>
                                             <TableRow className="bg-gray-50">
@@ -326,11 +333,11 @@ const MarketingTools = () => {
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
-                                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                            <Button className="btn-delete">
                                                                 <span>حذف</span>
                                                                 <AiOutlineDelete />
                                                             </Button>
-                                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                            <Button className="btn-edit">
                                                                 <span>تعديل</span>
                                                                 <FiEdit />
                                                             </Button>
