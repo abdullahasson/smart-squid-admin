@@ -1,6 +1,11 @@
+// Next
 import Link from "next/link"
+// React Icons
 import { FaCaretLeft } from "react-icons/fa";
 import { MdStorefront } from "react-icons/md";
+import { LuWallet , LuImport } from "react-icons/lu";
+import { PiExportBold , PiLinkSimpleBold } from "react-icons/pi";
+import { TbInputSearch } from "react-icons/tb";
 
 const Settings = () => {
     return (
@@ -13,10 +18,10 @@ const Settings = () => {
                 <div className="w-full bg-white rounded-lg shadow-sm py-16 px-10 flex flex-wrap gap-12 column-2">
                     <div className="flex-1 flex-col flex gap-5">
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/a">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">المحفظة</p>
+                                    <LuWallet className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -24,10 +29,10 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/b">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">قوالب التصدير</p>
+                                    <PiExportBold className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -35,10 +40,10 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/c">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">روابط مخصصة</p>
+                                    <PiLinkSimpleBold className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -46,10 +51,10 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/e">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">تحسين محركات البحث</p>
+                                    <TbInputSearch className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -57,10 +62,10 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/d">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
-                                    <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <p className="text-[#5E4D9D] font-semibold text-sm">استيراد البيانات</p>
+                                    <LuImport className="text-2xl" fill="#5E4D9D" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -83,7 +88,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/domain-settings">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/domain">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادات الدومين</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -94,7 +99,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/maintenance-mode">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">وضع الصيانة</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -105,7 +110,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/evaluation">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت التقييم</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />
@@ -116,7 +121,7 @@ const Settings = () => {
                             </Link>
                         </div>
                         <div className="flex-1">
-                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/">
+                            <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/employees">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت الموظفين</p>
                                     <MdStorefront className="text-2xl" fill="#5E4D9D" />

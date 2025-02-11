@@ -1,9 +1,8 @@
-import { meetings } from "@/utils/data"
-import { FiEdit } from "react-icons/fi";
-import { AiOutlineDelete } from "react-icons/ai";
-
-// import EditeOnMeeting from "@/components/EditeOnMeeting";
-
+// Data
+import { meetings } from "@/utils/data" 
+// Components
+import EditeOnMeeting from "@/components/EditeOnMeeting";
+// Shadcn UI
 import {
     Table,
     TableBody,
@@ -12,7 +11,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-
 import {
     Pagination,
     PaginationContent,
@@ -22,10 +20,10 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
-
 import { Label } from "@/components/ui/label";
-
 import { Button } from "@/components/ui/button";
+// React Icons
+import { AiOutlineDelete } from "react-icons/ai";
 
 
 
@@ -72,10 +70,8 @@ const Meetings = () => {
                                                 <span>حذف</span>
                                                 <AiOutlineDelete />
                                             </Button>
-                                            <Button className="btn-edit">
-                                                <span>تعديل</span>
-                                                <FiEdit />
-                                            </Button>
+                                                
+                                            <EditeOnMeeting defaultData={invoice} />
 
                                             {/* <EditeOnMeeting /> */}
                                         </div>

@@ -1,8 +1,7 @@
+// Next
 import Link from "next/link"
 import Image from "next/image"
-import GoogleConsoleImage from "@/images/google-console.svg"
-import { IoIosOptions } from "react-icons/io";
-
+// Shadcn UI
 import {
     Pagination,
     PaginationContent,
@@ -12,6 +11,15 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
+// React Icons
+import { IoIosOptions } from "react-icons/io";
+// Images
+import GoogleConsoleImage from "@/images/google-console.svg"
 
 
 const AdminApplications = () => {
@@ -39,22 +47,98 @@ const AdminApplications = () => {
 
                         <div className="flex flex-wrap justify-between gap-4 mt-5">
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <button className="btn-icon"><IoIosOptions /></button>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <button className="btn-icon">
+                                            <IoIosOptions />
+                                        </button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0">
+                                        <ul className="w-32 flex flex-col rounded-md border border-[#5A607F] bg-white border-collapse">
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الاتصال</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2 border-y border-[#5A607F]">اعدادت التطبيق</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الغاء</button>
+                                            </li>
+                                        </ul>
+                                    </PopoverContent>
+                                </Popover>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <button className="btn-icon"><IoIosOptions /></button>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <button className="btn-icon">
+                                            <IoIosOptions />
+                                        </button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0">
+                                        <ul className="w-32 flex flex-col rounded-md border border-[#5A607F] bg-white border-collapse">
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الاتصال</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2 border-y border-[#5A607F]">اعدادت التطبيق</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الغاء</button>
+                                            </li>
+                                        </ul>
+                                    </PopoverContent>
+                                </Popover>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <button className="btn-icon"><IoIosOptions /></button>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <button className="btn-icon">
+                                            <IoIosOptions />
+                                        </button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0">
+                                        <ul className="w-32 flex flex-col rounded-md border border-[#5A607F] bg-white border-collapse">
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الاتصال</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2 border-y border-[#5A607F]">اعدادت التطبيق</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الغاء</button>
+                                            </li>
+                                        </ul>
+                                    </PopoverContent>
+                                </Popover>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>
                             <div className="rounded-lg py-4 px-5 flex justify-between items-center w-[45%] bg-[#F4F4F8]">
-                                <button className="btn-icon"><IoIosOptions /></button>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <button className="btn-icon">
+                                            <IoIosOptions />
+                                        </button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0">
+                                        <ul className="w-32 flex flex-col rounded-md border border-[#5A607F] bg-white border-collapse">
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الاتصال</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2 border-y border-[#5A607F]">اعدادت التطبيق</button>
+                                            </li>
+                                            <li className="w-full">
+                                                <button className="text-[#5A607F] text-sm text-center w-full py-2">الغاء</button>
+                                            </li>
+                                        </ul>
+                                    </PopoverContent>
+                                </Popover>
                                 <p>Google Console</p>
                                 <Image src={GoogleConsoleImage} alt="Google Console" />
                             </div>

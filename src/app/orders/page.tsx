@@ -1,6 +1,8 @@
+// Next 
 import Link from "next/link"
+// Data
 import { orders } from "@/utils/data"
-
+// Shadcn UI
 import {
     Table,
     TableBody,
@@ -18,7 +20,6 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
-
 
 
 
@@ -49,7 +50,7 @@ const Orders = () => {
                             {orders.map((invoice, index: number) => (
                                 <TableRow key={index}>
                                     <TableCell className="text-center">
-                                        <Link href="/admin/orders/details" className="text-[#C74D0A] underline font-semibold">
+                                        <Link href="/orders/details" className="text-[#C74D0A] underline font-semibold">
                                             تفاصيل الطلب
                                         </Link>
                                     </TableCell>

@@ -64,22 +64,6 @@ export interface Meetings {
 }
 export const meetings: Meetings[] = [
     {
-        clientName: "علي محمد",
-        subject: "مراجعة خطة تطوير المنتج",
-        date: "1:00pm",
-        status: "قيد التنفيذ",
-        email: "ali.mohamed@gmail.com",
-        phone: "01123456789",
-    },
-    {
-        clientName: "سارة أحمد",
-        subject: "مناقشة استراتيجيات التسويق",
-        date: "2:00pm",
-        status: "قيد التنفيذ",
-        email: "sara.ahmed@gmail.com",
-        phone: "01234567890",
-    },
-    {
         clientName: "خالد علي",
         subject: "تحديث حول المشروع",
         date: "3:00pm",
@@ -88,20 +72,12 @@ export const meetings: Meetings[] = [
         phone: "01345678901",
     },
     {
-        clientName: "فاطمة الزهراء",
-        subject: "مراجعة الأداء المالي",
-        date: "4:00pm",
+        clientName: "محمد محمد",
+        subject: "مراجعة خطة العمل",
+        date: "6:00pm",
         status: "قيد التنفيذ",
-        email: "fatima.zahra@gmail.com",
-        phone: "01456789012",
-    },
-    {
-        clientName: "يوسف عبد الله",
-        subject: "تخطيط الحملة الإعلانية",
-        date: "5:00pm",
-        status: "قيد التنفيذ",
-        email: "yousef.abdallah@gmail.com",
-        phone: "01567890123",
+        email: "laila.hassan@gmail.com",
+        phone: "01678901234",
     },
     {
         clientName: "ليلى حسن",
@@ -305,23 +281,24 @@ export const products: Products[] = [
 // Reports data
 export interface Reports {
     month: string;
-    desktop: number;
-    mobile: number;
+    income: number; // Income
+    expenses: number; // Expenses
 }
+
 export const reports: Reports[] = [
-    { month: "January", desktop: 186, mobile: 80 },
-    { month: "February", desktop: 305, mobile: 200 },
-    { month: "March", desktop: 237, mobile: 120 },
-    { month: "April", desktop: 73, mobile: 190 },
-    { month: "May", desktop: 209, mobile: 130 },
-    { month: "June", desktop: 214, mobile: 140 },
-    { month: "July", desktop: 199, mobile: 120 },
-    { month: "August", desktop: 187, mobile: 100 },
-    { month: "September", desktop: 209, mobile: 120 },
-    { month: "October", desktop: 190, mobile: 120 },
-    { month: "November", desktop: 186, mobile: 80 },
-    { month: "December", desktop: 186, mobile: 80 },
-]
+    { month: "يناير", income: 186, expenses: 80 },
+    { month: "فبراير", income: 305, expenses: 200 },
+    { month: "مارس", income: 237, expenses: 120 },
+    { month: "أبريل", income: 73, expenses: 190 },
+    { month: "مايو", income: 209, expenses: 130 },
+    { month: "يونيو", income: 214, expenses: 140 },
+    { month: "يوليو", income: 199, expenses: 120 },
+    { month: "أغسطس", income: 187, expenses: 100 },
+    { month: "سبتمبر", income: 209, expenses: 120 },
+    { month: "أكتوبر", income: 190, expenses: 120 },
+    { month: "نوفمبر", income: 186, expenses: 80 },
+    { month: "ديسمبر", income: 186, expenses: 80 },
+];
 
 // Application Interface / End Points
 export interface ApplicationInterfaceEndPoints {
@@ -456,21 +433,43 @@ export const settingDomain: SettingDomain[] = [
     { type: "A", value: "192.162.1.1", lastEdited: "2024-11-30 14:00:00" },
     { type: "CNAME", value: "example.com", lastEdited: "2024-10-25 09:15:00" },
     { type: "MX", value: "mail.example.com", lastEdited: "2024-09-20 16:45:00" },
-    { type: "TXT", value: "v=spf1 include:example.com ~all", lastEdited: "2024-08-15 11:30:00" },
-    { type: "NS", value: "ns1.example.com", lastEdited: "2024-07-10 13:20:00" },
-    { type: "AAAA", value: "2001:0db8:85a3:0000:0000:8a2e:0370:7334", lastEdited: "2024-06-05 18:00:00" },
-    { type: "SRV", value: "sip.example.com", lastEdited: "2024-05-01 10:10:00" },
-    { type: "PTR", value: "1.1.162.192.in-addr.arpa", lastEdited: "2024-04-25 12:50:00" },
-    { type: "SOA", value: "ns1.example.com hostmaster.example.com", lastEdited: "2024-03-20 15:30:00" },
-    { type: "A", value: "203.0.113.45", lastEdited: "2024-02-15 08:45:00" },
-    { type: "CNAME", value: "www.example.com", lastEdited: "2024-01-10 17:25:00" },
-    { type: "MX", value: "smtp.example.com", lastEdited: "2023-12-05 14:15:00" },
-    { type: "TXT", value: "google-site-verification=abc123", lastEdited: "2023-11-30 10:05:00" },
-    { type: "NS", value: "ns2.example.com", lastEdited: "2023-10-25 19:55:00" },
-    { type: "AAAA", value: "2001:0db8:85a3:0000:0000:8a2e:0370:7335", lastEdited: "2023-09-20 12:40:00" },
-    { type: "SRV", value: "xmpp.example.com", lastEdited: "2023-08-15 16:20:00" },
-    { type: "PTR", value: "2.2.162.192.in-addr.arpa", lastEdited: "2023-07-10 09:10:00" },
-    { type: "SOA", value: "ns2.example.com hostmaster.example.com", lastEdited: "2023-06-05 14:00:00" },
-    { type: "A", value: "198.51.100.1", lastEdited: "2023-05-01 11:30:00" },
-    { type: "CNAME", value: "blog.example.com", lastEdited: "2023-04-25 18:45:00" },
 ];
+
+// Settings / Employees
+export interface SettingEmployees {
+    fullName: string;
+    jobTitle: string;
+    email: string;
+    joiningDate: string;
+    status: string;
+}
+export const settingEmployees: SettingEmployees[] = [
+    {
+        fullName: "علي حسن",
+        jobTitle: "مهندس برمجيات",
+        email: "ali@example.com",
+        joiningDate: "15/03/2022",
+        status: "نشط"
+    },
+    {
+        fullName: "فاطمة خالد",
+        jobTitle: "محاسبة",
+        email: "fatima@example.com",
+        joiningDate: "10/07/2021",
+        status: "غير نشط"
+    },
+    {
+        fullName: "يوسف أحمد",
+        jobTitle: "مدير تسويق",
+        email: "youssef@example.com",
+        joiningDate: "22/09/2023",
+        status: "نشط"
+    },
+    {
+        fullName: "ليلى محمود",
+        jobTitle: "مصممة جرافيك",
+        email: "laila@example.com",
+        joiningDate: "05/05/2020",
+        status: "نشط"
+    },
+]

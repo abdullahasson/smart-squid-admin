@@ -78,7 +78,7 @@ const AdminClients = () => {
                                                 <FiEdit />
                                             </Button>
 
-                                            <Link href="/admin/clients/details" className="text-[#C74D0A] underline font-semibold">
+                                            <Link href="/clients/details" className="text-[#C74D0A] underline font-semibold">
                                                 عرض التفاصيل
                                             </Link>
                                         </div>

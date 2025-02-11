@@ -38,7 +38,7 @@ const OrdersDetails = () => {
                                 <BreadcrumbSeparator className="rotate-180" />
 
                                 <BreadcrumbItem>
-                                    <Link href="/admin/orders">ادارة الطلب</Link>
+                                    <Link href="/orders">ادارة الطلب</Link>
                                 </BreadcrumbItem>
                             </BreadcrumbList>
                         </Breadcrumb>

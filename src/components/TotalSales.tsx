@@ -1,9 +1,13 @@
 "use client"
-
+// React
 import { useState } from "react"
-import { CartesianGrid, Line, LineChart, XAxis , YAxis } from "recharts"
+// Data
 import { totalSales } from "@/utils/data"
-
+// Shadcn UI
+import { format } from "date-fns"
+import { CalendarIcon } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { CartesianGrid, Line, LineChart, XAxis , YAxis } from "recharts"
 import {
     Card,
     CardContent,
@@ -15,10 +19,6 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
-
-import { format } from "date-fns"
-import { CalendarIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import {
@@ -78,11 +78,11 @@ export default function TotalSales() {
                 </div>
                 <div className="w-full h-10 flex items-center justify-center gap-6">
                     <div className="flex items-center gap-2">
-                        <p>الطلبات المنتهية</p>
+                        <p className="text-sm">الطلبات المنتهية</p>
                         <div className="rounded-full w-3 h-3 bg-green-500"></div>
                     </div>
                     <div className="flex items-center gap-2">
-                        <p>طلبات قيد التنفيذ</p>
+                        <p className="text-sm">طلبات قيد التنفيذ</p>
                         <div className="rounded-full w-3 h-3 bg-blue-500"></div>
                     </div>
                 </div>
@@ -119,6 +119,7 @@ export default function TotalSales() {
                         />
 
                         <YAxis
+                            orientation="right"
                             tickLine={false}
                             axisLine={false}
                             tickMargin={8}

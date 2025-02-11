@@ -1,69 +1,95 @@
+"use client"
+
+// React
+import { useState } from "react"
+// Shadcn UI
 import {
     Dialog,
     DialogContent,
     DialogFooter,
     DialogHeader,
     DialogTitle,
+    DialogClose,
     DialogTrigger,
 } from "@/components/ui/dialog"
-// import { Input } from "@/components/ui/input"
-// import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
+// React Icons
+import { FiEdit } from "react-icons/fi";
 
 
-const EditeOnMeeting = () => {
+export interface PropsDataType {
+    clientName: string;
+    subject: string;
+    date: string; // Time string
+    status: string;
+    email: string;
+    phone: string;
+}
+
+const EditeOnMeeting = ({ defaultData }: { defaultData: PropsDataType }) => {
+
+    const [isOpen , setIsOpen] = useState(false)
+
     return (
-        <Dialog>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                    تعديل
+                <Button className="btn-edit">
+                    <span>تعديل</span>
+                    <FiEdit />
                 </Button>
             </DialogTrigger>
 
-            {/* <DialogContent className="border-none sm:min-w-[600px] sm:px-0 sm:py-0 flex flex-col gap-4 p-5 sm:rounded-3xl overflow-hidden shadow-xl">
-                <DialogHeader className="h-20 flex items-center justify-center">
-                    <DialogTitle>
-                        تعديل الأجتماع
+
+
+            <DialogContent className="sm:rounded-3xl shadow-lg text-[#5E4D9D] max-w-[66vw] h-[60vh] overflow-y-auto p-12">
+                <DialogHeader className="text-center">
+                    <DialogTitle className="text-lg font-bold text-[#5E4D9D] text-center">
+                        تعديل الاجتماع
                     </DialogTitle>
                 </DialogHeader>
 
-                <div className="h-30 w-full py-10 px-5 flex flex-col gap-4">
-                    <div className="flex items-center w-full justify-between">
-                        <div className="flex-1 flex items-center gap-3">
-                            <Input className="flex-1" />
-                            <Label className="flex-1 text-center">وقت الاجتماع</Label>
+                <div className="flex flex-col gap-6 my-10">
+                    <div className="flex items-center justify-between flex-1 gap-12">
+                        <div className="flex itmes-center flex-1">
+                            <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black" readOnly value={defaultData.date}/>
+                            <Label className="w-[170px] flex items-center justify-end">
+                                وقت الاجتماع
+                            </Label>
                         </div>
-                        <div className="flex-1 flex items-center gap-3">
-                            <Input className="flex-1" />
-                            <Label className="flex-1 text-center">اسم العميل</Label>
+
+                        <div className="flex itmes-center flex-1">
+                            <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black" readOnly value={defaultData.clientName} />
+                            <Label className="w-[170px] flex items-center justify-end">
+                                اسم العميل
+                            </Label>
                         </div>
                     </div>
-
-                    <div className="flex items-center w-full justify-between">
-                        <div className="flex-1 flex items-center">
-                            <Input className="flex-1" />
-                            <Label className="flex-1 text-center">حالة الاجتماع</Label>
+                    
+                    <div className="flex items-center justify-between flex-1 gap-12">
+                        <div className="flex itmes-center flex-1 ">
+                            <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black" readOnly value={defaultData.status} />
+                            <Label className="w-[170px] flex items-center justify-end">
+                                حالة الاجتماع
+                            </Label>
                         </div>
-                        <div className="flex-1 flex items-center">
-                            <Input className="flex-1" />
-                            <Label className="flex-1 text-center">موضوع الاجتماع</Label>
+
+                        <div className="flex itmes-center flex-1">
+                            <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black" readOnly value={defaultData.subject} />
+                            <Label className="w-[170px] flex items-center justify-end">
+                                موضوع الاجتماع
+                            </Label>
                         </div>
                     </div>
                 </div>
 
-                <DialogFooter className="h-20 flex items-center gap-8 sm:justify-center">
-                    <Button className="btn-orange-t w-48">الغاء</Button>
+                <DialogFooter className="flex items-center sm:justify-evenly">
+                    <DialogClose asChild>
+                        <Button className="btn-orange-t w-48">الغاء</Button>
+                    </DialogClose>
                     
                     <Button className="btn-orange w-48">حفظ</Button>
-                </DialogFooter>
-            </DialogContent> */}
-
-            <DialogContent>
-                <DialogHeader>
-                    <DialogTitle>
-                    </DialogTitle>
-                </DialogHeader>
-                <DialogFooter>
                 </DialogFooter>
             </DialogContent>
         </Dialog>
