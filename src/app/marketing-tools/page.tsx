@@ -1,47 +1,17 @@
 "use client"
-// import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts"
-import { FiEdit } from "react-icons/fi";
-import { AiOutlineDelete } from "react-icons/ai";
-// import {
-//     Card,
-//     CardContent,
-//     CardDescription,
-//     CardHeader,
-//     CardTitle,
-// } from "@/components/ui/card"
-// import {
-    // ChartConfig,
-    // ChartContainer,
-    // ChartTooltip,
-    // ChartTooltipContent,
-// } from "@/components/ui/chart"
-// const chartData = [
-//     { month: "January", desktop: 186 },
-//     { month: "February", desktop: 305 },
-//     { month: "March", desktop: 237 },
-//     { month: "April", desktop: 73 },
-//     { month: "May", desktop: 209 },
-//     { month: "June", desktop: 214 },
-// ]
-// const chartConfig = {
-//     desktop: {
-//         label: "Desktop",
-//         color: "hsl(var(--chart-1))",
-//     },
-// } satisfies ChartConfig
 
-
+// Data
 import { marketingToolsOffers, marketingToolsCoupons, marketingToolsAdvertising } from "@/utils/data"
-
-
-
+// Components
+import AddOffer from "@/components/AddOffer"
+import AddCoupons from "@/components/AddCoupons"
+// Shadcn UI
 import {
     Tabs,
     TabsContent,
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
-
 import {
     Table,
     TableBody,
@@ -50,10 +20,11 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-
 import { Separator } from "@/components/ui/separator"
-
 import { Button } from "@/components/ui/button"
+// React Icons
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
 
 const MarketingTools = () => {
@@ -83,8 +54,10 @@ const MarketingTools = () => {
                             <Separator />
 
                             {/* Offers */}
-                            <TabsContent value="offers">
-                                <Button className="btn-purple absolute -top-32">اضافة عرض جديد</Button>
+                            <TabsContent value="offers" className="relative">
+                                
+                                <AddOffer />
+
                                 <div className="flex flex-col gap-8 py-4">
                                     <Table>
                                         <TableHeader>
@@ -201,8 +174,10 @@ const MarketingTools = () => {
                             </TabsContent>
 
                             {/* Coupons */}
-                            <TabsContent value="coupons">
-                                <Button className="btn-purple absolute -top-32">اضافة كوبون جديد</Button>
+                            <TabsContent value="coupons" className="relative">
+                                
+                                <AddCoupons />
+
                                 <div className="flex flex-col gap-8 py-4">
                                     <Table>
                                         <TableHeader>
@@ -365,3 +340,34 @@ const MarketingTools = () => {
 }
 
 export default MarketingTools;
+
+
+// import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from "recharts"
+
+// import {
+//     Card,
+//     CardContent,
+//     CardDescription,
+//     CardHeader,
+//     CardTitle,
+// } from "@/components/ui/card"
+// import {
+    // ChartConfig,
+    // ChartContainer,
+    // ChartTooltip,
+    // ChartTooltipContent,
+// } from "@/components/ui/chart"
+// const chartData = [
+//     { month: "January", desktop: 186 },
+//     { month: "February", desktop: 305 },
+//     { month: "March", desktop: 237 },
+//     { month: "April", desktop: 73 },
+//     { month: "May", desktop: 209 },
+//     { month: "June", desktop: 214 },
+// ]
+// const chartConfig = {
+//     desktop: {
+//         label: "Desktop",
+//         color: "hsl(var(--chart-1))",
+//     },
+// } satisfies ChartConfig

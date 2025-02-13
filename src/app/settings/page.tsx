@@ -21,7 +21,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">المحفظة</p>
-                                    <LuWallet className="text-2xl" fill="#5E4D9D" />
+                                    <LuWallet className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />

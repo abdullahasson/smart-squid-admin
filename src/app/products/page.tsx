@@ -1,7 +1,8 @@
+// Data
 import { products } from "@/utils/data"
-import { FiEdit } from "react-icons/fi";
-import { AiOutlineDelete } from "react-icons/ai";
-
+// components
+import AddProduct from "@/components/AddProduct"
+// Shadcn UI
 import {
     Table,
     TableBody,
@@ -10,7 +11,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-
 import {
     Pagination,
     PaginationContent,
@@ -20,8 +20,10 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
-
 import { Button } from "@/components/ui/button";
+// React Icons
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
 
 
@@ -36,9 +38,7 @@ const Products = () => {
                 <div className="table-container">
                     <div className="table-head">
                         <div>
-                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                أضافة منتج
-                            </Button>
+                            <AddProduct />
                         </div>
 
                         <h2 className="text-lg font-semibold">ادارة المنتجات</h2>

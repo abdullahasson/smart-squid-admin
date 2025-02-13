@@ -1,5 +1,6 @@
+// Next
 import Link from "next/link"
-
+// Shadcn UI
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -7,6 +8,9 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
 
 const AdminAddApplications = () => {
     return (
@@ -33,6 +37,41 @@ const AdminAddApplications = () => {
                                 </BreadcrumbItem>
                             </BreadcrumbList>
                         </Breadcrumb>
+                    </div>
+
+                    <div className="flex items-center gap-8">
+                        <div className="flex fle-col gap-5">
+                            <div className="flex items-center gap-3">
+                                <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black w-[220px]" />
+                                <Label className="w-[170px] flex items-center justify-end">
+                                    رابط EndPoint
+                                </Label>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black w-[220px]" />
+                                <Label className="w-[170px] flex items-center justify-end">
+                                    رابط EndPoint
+                                </Label>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-5">
+                            <div className="flex items-center gap-3">
+                                <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black w-[220px]" />
+                                <Label className="w-[170px] flex items-center justify-end">
+                                    رابط EndPoint
+                                </Label>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black w-[220px]" />
+                                <Label className="w-[170px] flex items-center justify-end">
+                                    رابط EndPoint
+                                </Label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <Button className="btn-orange">حفظ التطبيق</Button>
                     </div>
 
                 </div>

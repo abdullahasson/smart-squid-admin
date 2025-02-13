@@ -1,10 +1,11 @@
+// Next
 import Link from "next/link"
+// Data
 import { applicationInterfacesEndPoints, applicationInterfacesWebhooks } from "@/utils/data"
-
-import { MdStorefront } from "react-icons/md";
-import { FiEdit } from "react-icons/fi";
-import { AiOutlineDelete } from "react-icons/ai";
-
+// Components
+import AddApi from "@/components/AddApi"
+import AddWebhook from "@/components/AddWebhook"
+// Shadcn UI
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -12,14 +13,12 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
 import {
     Tabs,
     TabsContent,
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
-
 import {
     Table,
     TableBody,
@@ -28,17 +27,19 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-
 import { Separator } from "@/components/ui/separator"
-
 import { Button } from "@/components/ui/button"
+// React Icons
+import { MdStorefront } from "react-icons/md";
+import { FiEdit } from "react-icons/fi";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const ApplicationInterface = () => {
     return (
         <div className="flex-[4] p-9 flex flex-col gap-12">
             <div className="flex flex-col">
                 <div className="w-full mb-6">
-                    <h2 className="font-semibold text-xl">الاعدادات</h2>
+                    <h2 className="font-semibold text-xl">واجهة التطبيقات API</h2>
                 </div>
 
 
@@ -67,7 +68,7 @@ const ApplicationInterface = () => {
                     </div>
 
                     <div>
-                        <Tabs defaultValue="endpoints" className="">
+                        <Tabs defaultValue="endpoints" className="">                            
                             <TabsList className="flex items-center justify-end bg-white pb-0 rounded-none">
                                 <TabsTrigger value="weebhooks" className="tabs-btn mb-0">Webhooks</TabsTrigger>
                                 <TabsTrigger value="endpoints" className="tabs-btn mb-0">EndPoints</TabsTrigger>
@@ -76,8 +77,8 @@ const ApplicationInterface = () => {
                             <Separator />
 
                             {/* EndPoints */}
-                            <TabsContent value="endpoints">
-                                <Button className="btn-purple absolute -top-32">اضافة API جديد</Button>
+                            <TabsContent value="endpoints" className="relative">
+                                <AddApi />
                                 <div className="py-4">
                                     <Table>
                                         <TableHeader>
@@ -118,8 +119,8 @@ const ApplicationInterface = () => {
                             </TabsContent>
 
                             {/* Webhooks */}
-                            <TabsContent value="weebhooks">
-                                <Button className="btn-purple absolute -top-32">اضافة Webhooks جديد</Button>
+                            <TabsContent value="weebhooks" className="relative">
+                                <AddWebhook />
                                 <div className="py-4">
                                     <Table>
                                         <TableHeader>
@@ -137,11 +138,13 @@ const ApplicationInterface = () => {
                                                 <TableRow key={index}>
                                                     <TableCell>
                                                         <div className="flex items-center justify-center gap-2">
-                                                            <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                                                                حذف
+                                                        <Button className="btn-delete">
+                                                                <span>حذف</span>
+                                                                <AiOutlineDelete />
                                                             </Button>
-                                                            <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                                                                تعديل
+                                                            <Button className="btn-edit">
+                                                                <span>تعديل</span>
+                                                                <FiEdit />
                                                             </Button>
                                                         </div>
                                                     </TableCell>

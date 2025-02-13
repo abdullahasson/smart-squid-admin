@@ -39,7 +39,7 @@ const AdminApplications = () => {
 
                     <div className="flex flex-col w-full px-4">
                         <div className="flex items-center justify-between">
-                            <Link className="btn-purple" href="/admin/applications/add">
+                            <Link className="btn-purple" href="/applications/add">
                                 اضافة تطبيق
                             </Link>
                             <p>ربط حساباتك مع التطبيقات المتاحة لتحسين الأداء</p>

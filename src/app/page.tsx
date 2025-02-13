@@ -1,16 +1,22 @@
+"use client"
+ 
+// React
+import * as React from "react"
+
 // components
 import Overview from "@/components/Overview";
 import Totalsales from "@/components/TotalSales";
 import MonthlyTarget from "@/components/MonthlyTarget";
-// import DailyMeetings from "@/components/DailyMeetings";
-// fake data
-// import { overview } from "@/utils/data"
+import DailyMeetings from "@/components/DailyMeetings";
+import ReadOnlyDatePicker from "@/components/clock";
 
 const Home = () => {
     return (
         <div className="flex-[4] p-9 flex flex-col gap-12">
             <div className="flex flex-col">
-                <div className="w-full mb-6">
+                <div className="w-full mb-6 flex items-center justify-between">
+                    <ReadOnlyDatePicker />
+
                     <h2 className="font-semibold text-xl">نظرة عامة</h2>
                 </div>
                 <div dir="rtl" className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 items-end gap-4 w-full">
@@ -103,9 +109,9 @@ const Home = () => {
                 <Totalsales />
             </div>
 
-            {/* <div>
+            <div>
                 <DailyMeetings />
-            </div> */}
+            </div>
 
             <div>
                 <MonthlyTarget />

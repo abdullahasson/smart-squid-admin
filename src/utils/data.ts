@@ -52,6 +52,44 @@ export const totalSales: TotalSales[] = [
     { date: "2024-05-30", desktop: 460, mobile: 390 },
 ]
 
+export const dailyMeetings = [
+    {day: "" , subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 1, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 2, subject: "اجتماع مع فريق التطوير", time: "10:00 AM", place: "قاعة الاجتماعات", clientName: "فريق التطوير", note: "مناقشة التقدم في المشروع" },
+    { day: 3, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 4, subject: "مراجعة المشروع الحالي مع العميل", time: "11:00 AM", place: "مكتب الشركة", clientName: "أحمد سعيد", note: "مناقشة المراجعة الأخيرة على التصميم" },
+    { day: 5, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 6, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 7, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 8, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 9, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 10, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 11, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 12, subject: "اجتماع مع فريق التسويق", time: "9:00 AM", place: "قاعة الاجتماعات", clientName: "فريق التسويق", note: "تخطيط الحملة القادمة" },
+    { day: 13, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 14, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 15, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 16, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 17, subject: "عرض تقديمي للعميل الجديد", time: "2:00 PM", place: "فندق جراند", clientName: "شركة التقنية الحديثة", note: "تحضير العرض التقديمي" },
+    { day: 18, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 19, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 20, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 21, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 22, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 23, subject: "اجتماع مع فريق الجودة", time: "10:00 AM", place: "قاعة الاجتماعات", clientName: "فريق الجودة", note: "مراجعة معايير الجودة" },
+    { day: 24, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 25, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 26, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 27, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 28, subject: "اجتماع مع فريق الدعم الفني", time: "3:00 PM", place: "قاعة الاجتماعات", clientName: "فريق الدعم الفني", note: "تحسين خدمات العملاء" },
+    { day: 29, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 30, subject: "", time: "", place: "", clientName: "", note: "" },
+    { day: 31, subject: "", time: "", place: "", clientName: "", note: "" },
+    {day: "" , subject: "", time: "", place: "", clientName: "", note: "" },
+    {day: "" , subject: "", time: "", place: "", clientName: "", note: "" },
+    {day: "" , subject: "", time: "", place: "", clientName: "", note: "" },
+];
+
 
 // Meetings data
 export interface Meetings {

@@ -41,9 +41,9 @@ const Orders = () => {
                     <Table>
                         <TableHeader>
                             <TableRow className="bg-gray-50">
-                                <TableHead className="text-center font-semibold">خيارات</TableHead>
-                                <TableHead className="text-center font-semibold">سعر الطلب</TableHead>
-                                <TableHead className="text-center font-semibold">اسم العميل</TableHead>
+                                <TableHead className="font-semibold text-center">خيارات</TableHead>
+                                <TableHead className="font-semibold text-center">سعر الطلب</TableHead>
+                                <TableHead className="font-semibold text-center">اسم العميل</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
