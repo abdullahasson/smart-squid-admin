@@ -1,9 +1,8 @@
+// Next
 import Link from "next/link"
-
+// Data
 import { settingDomain } from "@/utils/data"
-
-import { MdStorefront } from "react-icons/md";
-
+// Shadcn UI
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -11,9 +10,7 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
 import { Button } from "@/components/ui/button"
-
 import {
     Table,
     TableBody,
@@ -22,6 +19,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+// React Icons
+import { SiInternetcomputer } from "react-icons/si";
 
 const DomainSettings = () => {
     return (
@@ -42,7 +41,7 @@ const DomainSettings = () => {
                                     <BreadcrumbPage>
                                         <div className="flex items-center gap-2">
                                             <p className="text-[#5E4D9D] font-semibold text-sm">اعدادات الدومين</p>
-                                            <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                            <SiInternetcomputer className="text-2xl" fill="#5E4D9D" />
                                         </div>
                                     </BreadcrumbPage>
                                 </BreadcrumbItem>

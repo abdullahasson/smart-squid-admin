@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { clients } from "@/utils/data";
 import { FiEdit } from "react-icons/fi";
-import { AiOutlineDelete } from "react-icons/ai";
+// import { AiOutlineDelete } from "react-icons/ai";
 
 // import EditeOnMeeting from "@/components/EditeOnMeeting";
-// import DeleteClient from "@/components/DeleteClient";
+import DeleteClient from "@/components/DeleteClient";
 
 import {
     Table,
@@ -42,9 +42,9 @@ const AdminClients = () => {
                 <div className="table-container">
                     <div className="table-head">
                         <div className="flex items-center gap-3">
-                            <Button className="btn-purple">
+                            <Link className="btn-purple" href="/clients/add">
                                 أضافة عميل
-                            </Button>
+                            </Link>
                             <Button className="text-[#C74D0A] border border-[#C74D0A] bg-white font-semibold px-5 hover:bg-[#C74D0A] transition-all hover:text-white">اجمالي المبيعات</Button>
                             <Button className="text-[#C74D0A] border border-[#C74D0A] bg-white font-semibold px-5 hover:bg-[#C74D0A] transition-all hover:text-white">اسم العميل</Button>
                             <Label className="text-[#C74D0A] font-semibold">تصنيف العميل حسب</Label>
@@ -69,10 +69,8 @@ const AdminClients = () => {
                                     <TableCell>
                                         <div className="flex items-center justify-center gap-2">
 
-                                            <Button className="btn-delete">
-                                                <span>حذف</span>
-                                                <AiOutlineDelete />
-                                            </Button>
+                                            <DeleteClient />
+
                                             <Button className="btn-edit">
                                                 <span>تعديل</span>
                                                 <FiEdit />

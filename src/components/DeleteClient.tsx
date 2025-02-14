@@ -1,3 +1,8 @@
+"use client"
+
+// React
+import { useState } from "react"
+// Shadcn UI
 import {
     Dialog,
     DialogContent,
@@ -5,48 +10,47 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogClose,
 } from "@/components/ui/dialog"
-
 import { Button } from "@/components/ui/button"
+// React Icons
+import { AiOutlineDelete } from "react-icons/ai";
 
 const DeleteClient = () => {
+
+    const [isOpen , setIsOpen] = useState(false)
+
     return (
-        <Dialog>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
-                    حذف
+                <Button className="btn-delete">
+                    <span>حذف</span>
+                    <AiOutlineDelete />
                 </Button>
             </DialogTrigger>
-
-
-            {/* 
-            <DialogContent className="w-[900px] border-none rounded-3xl py-28">
+            
+            
+            <DialogContent className="w-[900px] border-none sm:rounded-[30px] sm:py-16">
                  <DialogHeader>
                     <DialogTitle className="text-center text-[#5E4D9D] text-xl font-semibold">
-                        تعديل الاجتماع
+                        هل أنت متأكد من الغاء هذا العميل؟
                     </DialogTitle>
                 </DialogHeader>
+
+                <div className="my-4"></div>
 
                 <DialogFooter className="flex justify-center items-center gap-4 px-10">
-                    <Button className="flex-1 rounded-md text-[#C74D0A] bg-transparent hover:bg-[#C74D0A] hover:text-white py-2 px-6 text-center border border-[#C74D0A]">الغاء</Button>
-                    <Button type="submit" className="flex-1 rounded-md bg-[#C74D0A] hover:bg-[#C74D0A] text-white py-2 px-6 text-center">تعيين</Button>
+                    
+                    <DialogClose asChild>
+                        <Button className="flex-1 rounded-lg text-[#C74D0A] bg-transparent hover:bg-[#C74D0A] hover:text-white py-2 px-6 text-center border border-[#C74D0A]">لا</Button>
+                    </DialogClose>
+
+                    <Button className="flex-1 rounded-lg bg-[#C74D0A] hover:bg-[#C74D0A] text-white py-2 px-6 text-center">نعم</Button>
                 </DialogFooter> 
             </DialogContent>
-            */}
-
-
-            <DialogContent>
-                <DialogHeader>
-                    <DialogTitle>
-                        Not Ready yet
-                    </DialogTitle>
-                </DialogHeader>
-                <DialogFooter>
-                
-                </DialogFooter>
-            </DialogContent>
+            
         </Dialog>
     )
 }
 
-export default DeleteClient
+export default DeleteClient;

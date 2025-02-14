@@ -1,11 +1,14 @@
 // Next
 import Link from "next/link"
 // React Icons
-import { FaCaretLeft } from "react-icons/fa";
+import { FaCaretLeft , FaCheck } from "react-icons/fa";
 import { MdStorefront } from "react-icons/md";
 import { LuWallet , LuImport } from "react-icons/lu";
 import { PiExportBold , PiLinkSimpleBold } from "react-icons/pi";
 import { TbInputSearch } from "react-icons/tb";
+import { AiFillTool } from "react-icons/ai";
+import { RiUserSettingsLine } from "react-icons/ri";
+import { SiInternetcomputer } from "react-icons/si";
 
 const Settings = () => {
     return (
@@ -32,7 +35,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">قوالب التصدير</p>
-                                    <PiExportBold className="text-2xl" fill="#5E4D9D" />
+                                    <PiExportBold className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -43,7 +46,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">روابط مخصصة</p>
-                                    <PiLinkSimpleBold className="text-2xl" fill="#5E4D9D" />
+                                    <PiLinkSimpleBold className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -54,7 +57,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تحسين محركات البحث</p>
-                                    <TbInputSearch className="text-2xl" fill="#5E4D9D" />
+                                    <TbInputSearch className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -65,7 +68,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">استيراد البيانات</p>
-                                    <LuImport className="text-2xl" fill="#5E4D9D" />
+                                    <LuImport className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -80,7 +83,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/design">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">تصميم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <MdStorefront className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -91,7 +94,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/domain">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادات الدومين</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <SiInternetcomputer className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -102,7 +105,8 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/maintenance-mode">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">وضع الصيانة</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    
+                                    <AiFillTool className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -113,7 +117,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/evaluation">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت التقييم</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <FaCheck className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />
@@ -124,7 +128,7 @@ const Settings = () => {
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings/employees">
                                 <div className="flex items-center gap-2">
                                     <p className="text-[#5E4D9D] font-semibold text-sm">اعدادت الموظفين</p>
-                                    <MdStorefront className="text-2xl" fill="#5E4D9D" />
+                                    <RiUserSettingsLine className="text-2xl text-[#5E4D9D]" />
                                 </div>
                                 <div>
                                     <FaCaretLeft className="text-2xl" fill="#5E4D9D" />

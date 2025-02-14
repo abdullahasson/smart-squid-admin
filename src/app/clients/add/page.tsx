@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 
-const ClientDetails = () => {
+const ClientAdd = () => {
     return (
         <div className="flex-[4] p-9 flex flex-col gap-12">
             <div className="flex flex-col">
@@ -26,7 +26,7 @@ const ClientDetails = () => {
                         <Breadcrumb>
                             <BreadcrumbList>
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage>تفاصيل العميل</BreadcrumbPage>
+                                    <BreadcrumbPage>اضافة عميل</BreadcrumbPage>
                                 </BreadcrumbItem>
 
                                 <BreadcrumbSeparator className="rotate-180" />
@@ -40,7 +40,7 @@ const ClientDetails = () => {
 
 
                     <div className="py-10">
-                        <div className="flex flex-row-reverse w-full justify-start gap-20">
+                        <div className="flex flex-row-reverse w-full justify-center gap-20">
                             <div className=" flex justify-between flex-col gap-2">
                                 <div className="flex items-center justify-start gap-2 ">
                                     <Input readOnly className="outline-none text-center rounded-xl" />
@@ -54,33 +54,26 @@ const ClientDetails = () => {
                                     <Input readOnly className="outline-none text-center rounded-xl" />
                                     <Label className="w-[170px]">البريد الألكتروني</Label>
                                 </div>
-                                <div className="flex items-center justify-end gap-2">
-                                    <Input readOnly className="outline-none text-center rounded-xl" />
-                                    <Label className="w-[170px]">رقم الواتساب</Label>
-                                </div>
                             </div>
 
                             <div className=" flex justify-between flex-col gap-2">
-                                <div>
-                                    <h3 className="text-lg font-semibold text-[#5E4D9D]">تفاصيل الطلب</h3>
-                                </div>
-                                <div className="flex items-center justify-start">
-                                    <Input readOnly className="outline-none text-center rounded-xl w-20" />
+                                <div className="flex items-center justify-start gap-2 ">
+                                    <Input readOnly className="outline-none text-center rounded-xl" />
                                     <Label className="w-[170px]">عدد الطلبات</Label>
                                 </div>
-                                <div className="flex items-center justify-center">
-                                    <Input readOnly className="outline-none text-center rounded-xl w-20" />
+                                <div className="flex items-center justify-center gap-2">
+                                    <Input readOnly className="outline-none text-center rounded-xl" />
                                     <Label className="w-[170px]">اجمالي المدفوعات</Label>
                                 </div>
-                                <div className="flex items-center justify-end">
-                                    <Input readOnly className="outline-none text-center rounded-xl w-20" />
+                                <div className="flex items-center justify-end gap-2">
+                                    <Input readOnly className="outline-none text-center rounded-xl" />
                                     <Label className="w-[170px]">اجمالي الاجتماعات</Label>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-10">
-                            <Button className="btn-orange rounded-lg px-10">الغاء</Button>
+                        <div className="mt-10 flex items-center justify-center w-full">
+                            <Button className="btn-orange sm:rounded-lg w-64">حفظ</Button>
                         </div>
                     </div>
                 </div>
@@ -89,4 +82,4 @@ const ClientDetails = () => {
     )
 }
 
-export default ClientDetails;
+export default ClientAdd;

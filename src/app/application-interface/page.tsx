@@ -39,7 +39,7 @@ const ApplicationInterface = () => {
         <div className="flex-[4] p-9 flex flex-col gap-12">
             <div className="flex flex-col">
                 <div className="w-full mb-6">
-                    <h2 className="font-semibold text-xl">واجهة التطبيقات API</h2>
+                    <h2 className="font-semibold text-xl">API  واجهة التطبيقات</h2>
                 </div>
 
 
@@ -52,7 +52,7 @@ const ApplicationInterface = () => {
                                 <BreadcrumbItem>
                                     <BreadcrumbPage>
                                         <div className="flex items-center gap-2">
-                                            <p className="text-[#5E4D9D] font-semibold text-sm">أدوات التسويق</p>
+                                            <p className="text-[#5E4D9D] font-semibold text-sm">واجهة التطبيقات</p>
                                             <MdStorefront className="text-2xl" fill="#5E4D9D" />
                                         </div>
                                     </BreadcrumbPage>

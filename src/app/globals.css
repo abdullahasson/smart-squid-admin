@@ -94,11 +94,19 @@ html {
 }
 
 .btn-edit {
-  @apply bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white
+  &:hover {
+    background-color: #8977CC !important;
+    color: white !important
+  }
+  @apply bg-[#8977CC] text-white rounded-md 
 }
 
 .btn-delete {
-  @apply bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white
+  &:hover {
+    background-color: #C74D0A !important;
+    color: white !important;
+  }
+  @apply bg-[#C74D0A] text-white rounded-md
 }
 
 .icon-btn {

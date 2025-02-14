@@ -96,8 +96,6 @@ const DailyMeetings = () => {
                                     </div>
                                 </TooltipTrigger>
                                 
-                                
-
                                 <TooltipContent side="left" className="flex flex-col overflow-hidden border-t-[12px] border-t-[#C74D0A] rounded-lg p-2">
                                     
                                         <div className="text-center pb-2">
