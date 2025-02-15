@@ -46,55 +46,55 @@ const MaintenanceMode = () => {
                         </Breadcrumb>
                     </div>
 
-                    <div className="flex flex-col w-full ">
+                    <div className="flex flex-col w-full gap-10">
 
                         <div>
-                            <h3>اعدادت وضع الصيانة</h3>
-                            <div className="flex items-center justify-between">
-                                <div className="flex-1 flex flex-col gap-2">
-                                    <p>الوضع الحالي</p>
-                                    <div className="text-white bg-[#C74D0A] rounded-xl px-5 py-3">
+                            <h3 className="text-lg text-[#5E4D9D] mb-4 font-semibold">اعدادت وضع الصيانة</h3>
+                            <div className="flex items-center justify-between flex-row-reverse">
+                                <div className="flex-[2] flex items-center justify-end gap-2">
+                                    <div className="btn-orange">
                                         مفعل
                                     </div>
+                                    <p className="text-md">الوضع الحالي</p>
                                 </div>
 
-                                <div className="flex-1 flex flex-col gap-2">
-                                    <p>اذا كنت ترغب في تعطيل وضع الصيانة</p>
-                                    <Button className="bg-[#C74D0A] rounded-xl">تعطيل الصيانة</Button>
+                                <div className="flex-[2] flex items-center justify-end gap-2">
+                                    <Button className="bg-[#C74D0A] rounded-xl btn-orange-t">تعطيل الصيانة</Button>
+                                    <p className="text-md">اذا كنت ترغب في تعطيل وضع الصيانة</p>
                                 </div>
+
+                                <div className="flex-1"></div>
                             </div>
                         </div>
 
                         <div>
-                            <h3>اعدادات تخصيص وضع الصيانة</h3>
+                            <h3 className="text-lg text-[#5E4D9D] mb-4 font-semibold">اعدادات تخصيص وضع الصيانة</h3>
 
-                            <div className="flex items-center justify-between">
-                                <div className="flex-1 flex items-center gap-2">
+                            <div className="flex items-center justify-between gap-[55px]">
+                                <div className="flex-1 flex items-center gap-1">
+                                    <Textarea defaultValue='5-12-2024 : 15 الساعة' className="border border-[#5E4D9D] resize-none" placeholder="الرسالة المخصصة" />
                                     <div>
-                                        <h3>الرسالة المخصصة</h3>
-                                        <p>
-                                            أدخل الرسالة التي ستظهر للزوار عند تفعيل وضع الصيانة
-                                        </p>
-                                    </div>
-
-                                    <Textarea placeholder="الرسالة المخصصة" />
-                                </div>
-
-                                <div className="flex-1 flex items-center gap-2">
-                                    <div>
-                                        <h3>تاريخ ووقت الأنتهاء</h3>
-                                        <p>
+                                        <h3 className="text-md font-semibold">تاريخ ووقت الأنتهاء</h3>
+                                        <p className="text-[12px]">
                                             أدخل التاريخ و الوقت المتوقع للانتهاء
                                         </p>
                                     </div>
+                                </div>
 
-                                    <Textarea placeholder="الرسالة المخصصة" />
+                                <div className="flex-1 flex items-center gap-1">
+                                    <Textarea defaultValue='نحن في صيانة حاليا نعتذر عن الأزعاج و سنكون على استعداد لأستقبالكم قريبا' className="border border-[#5E4D9D] resize-none" placeholder="الرسالة المخصصة" />
+                                    <div>
+                                        <h3 className="text-md font-semibold">الرسالة المخصصة</h3>
+                                        <p className="text-[12px]">
+                                            أدخل الرسالة التي ستظهر للزوار عند تفعيل وضع الصيانة
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <Button>تفعيل وضع الصيانة</Button>
+                            <Button className="btn-orange-t">تفعيل وضع الصيانة</Button>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,8 @@
 import Link from "next/link"
 // Data
 import { settingEmployees } from "@/utils/data";
+// Components
+import AddEmploye from "@/components/AddEmploye"
 // Shadcn UI
 import {
     Breadcrumb,
@@ -30,6 +32,7 @@ import {
 } from "@/components/ui/pagination"
 // React Icons
 import { FaCheck } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 import { RiUserSettingsLine } from "react-icons/ri";
 
 const Employees = () => {
@@ -68,9 +71,9 @@ const Employees = () => {
                     <div>
 
                         <div className="flex items-center justify-between mb-5">
-                            <Button className="btn-purple">
-                                اضافة موظف جديد
-                            </Button>
+
+                            <AddEmploye />
+
                             <h3 className="text-[#5E4D9D] text-lg font-bold">قائمة الموظفين</h3>
                         </div>
 
@@ -91,13 +94,13 @@ const Employees = () => {
                                         <TableRow key={index}>
                                             <TableCell>
                                                 <div className="flex items-center justify-center gap-2">
-                                                    <Button className="bg-[#C74D0A] text-white rounded-md hover:bg-[#C74D0A] hover:text-white">
+                                                    <Button className="btn-delete">
                                                         حذف
                                                     </Button>
-                                                    <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                    <Button className="btn-edit">
                                                         تعديل
                                                     </Button>
-                                                    <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
+                                                    <Button className="btn-stop">
                                                         ايقاف
                                                     </Button>
                                                 </div>
@@ -155,10 +158,10 @@ const Employees = () => {
                             </h3>
 
                             <div className="flex items-center w-full justify-end gap-4">
-                                <Button>
+                                <Button className="btn-orange-t">
                                     المسمى الوظيفي
                                 </Button>
-                                <Button>
+                                <Button className="btn-purple-t">
                                     اسم الموظف
                                 </Button>
                                 <h3>اختيار موظف</h3>
@@ -187,12 +190,12 @@ const Employees = () => {
                                                 <div className="flex flex-row items-center justify-between gap-2">
                                                     <div><p>ادارة المستخدمين</p></div>
 
-                                                    <div><FaCheck /></div>
+                                                    <div><FaCheck className="text-[#5E4D9D]" /></div>
                                                 </div>
                                                 <div className="flex flex-row items-center justify-between gap-2">
                                                     <div><p>ادارة المنتجات و الخدمات</p></div>
 
-                                                    <div><FaCheck /></div>
+                                                    <div><FaXmark className="text-[#C74D0A]" /></div>
                                                 </div>
                                             </div>
                                         </TableCell>
@@ -213,7 +216,7 @@ const Employees = () => {
                         </Table>
                     </div>
 
-                    <div className="mt-12  px-10">
+                    <div className="mt-12  px-10 flex items-center justify-start">
                         <Button className="btn-orange">
                             حفظ التغيرات
                         </Button>

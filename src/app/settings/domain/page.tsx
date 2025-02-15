@@ -2,6 +2,8 @@
 import Link from "next/link"
 // Data
 import { settingDomain } from "@/utils/data"
+// Components
+import AddDns from "@/components/AddDns"
 // Shadcn UI
 import {
     Breadcrumb,
@@ -19,6 +21,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 // React Icons
 import { SiInternetcomputer } from "react-icons/si";
 
@@ -55,7 +59,49 @@ const DomainSettings = () => {
                         </Breadcrumb>
                     </div>
 
+
                     <div>
+                        <div className="w-full mb-6">
+                            <p>
+                                هذا القسم يتيح لك ادراة الدومين الخاص بمتجرك , بما في ذلك ربط الدومين و تعديله
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col gap-12 mt-10 mb-5 px-16">
+                            <div className="flex items-center justify-between">
+                                <div className="flex flex-1 items-center justify-start space-x-2">
+                                    <Input className="w-[220px] rounded-lg text-center" defaultValue="32-12-2024" />
+                                    <Label className="w-[133px]">تاريخ انتهاء الدومين</Label>
+                                </div>
+
+                                <div className="flex flex-1 items-center justify-end space-x-2">
+                                    <Input className="w-[220px] rounded-lg text-center" defaultValue="example.com" />
+                                    <Label className="w-[133px]">اسم الدومين الحالي</Label>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div className="flex-[2] flex items-center justify-end gap-2">
+                                    <div className="btn-orange">
+                                        مفعل
+                                    </div>
+                                    <Label className="text-md">حالة الدومين</Label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div className="flex items-center justify-between">
+                                    <AddDns/>
+
+                                    <h3 className="text-lg text-[#5E4D9D] mb-4 font-semibold">DNS   اعدادت سجلات </h3>
+                                </div>
+                            </div>
+                        </div>
+
+ 
+
+
                         <Table>
                             <TableHeader>
                                 <TableRow className="bg-gray-50">
@@ -89,7 +135,7 @@ const DomainSettings = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default DomainSettings;

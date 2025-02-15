@@ -25,8 +25,8 @@ const AddEmploye = () => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button className="bg-[#8977CC] text-white rounded-md hover:bg-[#8977CC] hover:text-white">
-                    أضافة موظف جديد
+                <Button className="btn-purple">
+                    اضافة موظف جديد
                 </Button>
             </DialogTrigger>
 

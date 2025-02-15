@@ -82,14 +82,34 @@ html {
 
 /* buttons */
 .btn-purple {
+  &:hover {
+    background-color: #5E4D9D !important;
+    color: white !important; 
+  }
   @apply rounded-md text-white bg-[#5E4D9D] py-2 px-6 text-center;
 }
 
+.btn-purple-t {
+  &:hover {
+    background-color: white !important;
+    color: #5E4D9D !important;
+  }
+  @apply rounded-md text-[#5E4D9D] border border-[#5E4D9D] bg-white py-2 px-6 text-center;
+}
+
 .btn-orange {
+  &:hover {
+    background-color: #C74D0A !important;
+    color: white !important;
+  }
   @apply rounded-md text-white bg-[#C74D0A] py-2 px-6 text-center;
 }
 
 .btn-orange-t {
+  &:hover {
+    background-color: white !important;
+    color: #C74D0A !important;
+  }
   @apply rounded-md text-[#C74D0A] border border-[#C74D0A] bg-white py-2 px-6 text-center;
 }
 
@@ -108,6 +128,15 @@ html {
   }
   @apply bg-[#C74D0A] text-white rounded-md
 }
+/* F8F7FD */
+.btn-stop {
+  &:hover {
+    background-color: #F8F7FD !important;
+    color: #5E4D9D !important;
+  }
+  @apply rounded-md text-[#5E4D9D] bg-[#F8F7FD] border border-[#5E4D9D] bg-white py-2 px-6 text-center;
+}
+
 
 .icon-btn {
   @apply p-2 

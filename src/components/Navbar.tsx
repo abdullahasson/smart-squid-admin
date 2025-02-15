@@ -6,7 +6,12 @@ import { IoHomeOutline, IoPerson } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
 import { LuLogOut } from "react-icons/lu";
 import { CiSettings } from "react-icons/ci";
+// import { AiOutlineProduct } from "react-icons/ai";
+import { LuShoppingBag , LuMessageCircleReply } from "react-icons/lu";
 import { MdOutlineAppShortcut } from "react-icons/md";
+import { GrCubes } from "react-icons/gr";
+import { TbReportSearch } from "react-icons/tb";
+import { SiGooglemarketingplatform } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
 
 const Navbar = () => {
@@ -17,13 +22,13 @@ const Navbar = () => {
     // ready pages: meetings / orders / clients / products / settings-design /
     { name: "الرئيسية", href: "/", icon: <IoHomeOutline /> , notigaction: 0 },
     { name: "الاجتماعات", href: "/meetings", icon: <IoPerson /> , notigaction: 0 },
-    { name: "الطلبات", href: "/orders", icon: <IoHomeOutline /> , notigaction: 12 },
+    { name: "الطلبات", href: "/orders", icon: <LuMessageCircleReply /> , notigaction: 12 },
     { name: "العملاء", href: "/clients", icon: <IoIosPeople /> , notigaction: 0 },
-    { name: "التقارير", href: "/reports", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "التقارير", href: "/reports", icon: <TbReportSearch /> , notigaction: 0 },
     { name: "التطبيقات", href: "/applications", icon: <MdOutlineAppShortcut /> , notigaction: 0 },
-    { name: "المنتجات", href: "/products", icon: <IoHomeOutline /> , notigaction: 0 },
-    { name: "API واجهة التطبيقات", href: "/application-interface", icon: <IoHomeOutline /> , notigaction: 0 },
-    { name: "الأدوات التسويقية", href: "/marketing-tools", icon: <IoHomeOutline /> , notigaction: 0 },
+    { name: "المنتجات", href: "/products", icon: <LuShoppingBag /> , notigaction: 0 },
+    { name: "API واجهة التطبيقات", href: "/application-interface", icon: <GrCubes /> , notigaction: 0 },
+    { name: "الأدوات التسويقية", href: "/marketing-tools", icon: <SiGooglemarketingplatform /> , notigaction: 0 },
     { name: "الأعدادات", href: "/settings", icon: <CiSettings /> , notigaction: 0 },
     { name: "تسجيل الخروج", href: "/logout", icon: <LuLogOut /> , notigaction: 0 },
   ]

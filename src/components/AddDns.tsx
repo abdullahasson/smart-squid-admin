@@ -50,7 +50,7 @@ const AddDns = () => {
                 <div className="flex items-center justify-between flex-col flex-1 gap-6 my-8">
                     <div className="flex itmes-center flex-1">
                         <Select>
-                            <SelectTrigger className="w-[180px]">
+                            <SelectTrigger dir="rtl" className="w-[220px] border border-[#5E4D9D]">
                                 <SelectValue placeholder="قم باختيار نوع السجل" />
                             </SelectTrigger>
                             <SelectContent>
@@ -69,7 +69,7 @@ const AddDns = () => {
                     </div>
 
                     <div className="flex itmes-center flex-1 ">
-                        <Input className="rounded-lg p-2 border border-[#5E4D9D] text-black" />
+                        <Input className="w-[220px] rounded-lg p-2 border border-[#5E4D9D] text-black" />
                         <Label className="w-[170px] flex items-center justify-end">
                             القيمة
                         </Label>
