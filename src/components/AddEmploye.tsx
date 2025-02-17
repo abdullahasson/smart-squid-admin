@@ -69,42 +69,48 @@ const AddEmploye = () => {
                     </div>
 
                     <div className="flex itmes-center flex-1 ">
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="terms" />
-                            <label
-                                htmlFor="terms"
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                            >
-                                اجتماعات
-                            </label>
+                        <div className="flex items-center flex-row-reverse gap-2">
+                            <div className="flex items-center space-x-2">
+                                <Checkbox id="terms" />
+                                <label
+                                    htmlFor="terms"
+                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                >
+                                    اجتماعات
+                                </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Checkbox id="terms" />
+                                <label
+                                    htmlFor="terms"
+                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                >
+                                    طلبات
+                                </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Checkbox id="terms" />
+                                <label
+                                    htmlFor="terms"
+                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                >
+                                    تقارير
+                                </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Checkbox id="terms" />
+                                <label
+                                    htmlFor="terms"
+                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                >
+                                    اعدادت الموقع
+                                </label>
+                            </div>
                         </div>
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="terms" />
-                            <label
-                                htmlFor="terms"
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                            >
-                                طلبات
-                            </label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="terms" />
-                            <label
-                                htmlFor="terms"
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                            >
-                                تقارير
-                            </label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="terms" />
-                            <label
-                                htmlFor="terms"
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                            >
-                                اعدادت الموقع
-                            </label>
-                        </div>
+
+                        <Label className="w-[170px] flex items-center justify-end">
+                            الصلاحيات
+                        </Label>
                     </div>
                 </div>
 

@@ -339,8 +339,8 @@ const MarketingTools = () => {
 
                                             
                                             <Card className="flex flex-col flex-1 bg-[#F8F7FD]">
-                                                <CardHeader>
-                                                    <CardTitle className="text-md">معدل التحويل</CardTitle>
+                                                <CardHeader className="text-center">
+                                                    <CardTitle className="text-md text-center">معدل التحويل</CardTitle>
                                                 </CardHeader>
                                                 <CardContent className="flex-1 pb-0">
                                                     <ChartContainer
@@ -463,63 +463,69 @@ const MarketingTools = () => {
                                                                 cursor={false}
                                                                 content={<ChartTooltipContent hideLabel />}
                                                             />
-                                                            <Bar barSize={12} dataKey="desktop" fill="var(--color-desktop)" radius={8} />
+                                                            <Bar barSize={12} dataKey="desktop" fill="var(--color-desktop)" radius={8}>
+
+                                                            </Bar>
                                                         </BarChart>
                                                     </ChartContainer>
                                                 </CardContent>
                                             </Card>
-                                           <Card className="flex flex-col flex-1 bg-[#F8F7FD]">
-                                                <CardHeader>
-                                                    <CardTitle className="text-md">معدل التحويل</CardTitle>
+                                            <Card className="flex flex-col flex-1 bg-[#F8F7FD]">
+                                                <CardHeader className="flex items-center">
+                                                    <CardTitle className="text-md text-center">معدل التحويل</CardTitle>
+                                                    <CardDescription className="text-center">15 April - 15 May</CardDescription>
                                                 </CardHeader>
                                                 <CardContent className="flex-1 pb-0">
                                                     <ChartContainer
-                                                    config={radialchartConfig}
-                                                    className="mx-auto aspect-square max-h-[250px] max-w-[250px]"
+                                                        config={radialchartConfig}
+                                                        className="mx-auto aspect-square max-h-[250px] max-w-[250px]"
                                                     >
-                                                    <RadialBarChart
-                                                        data={radialchartData}
-                                                        startAngle={0}
-                                                        endAngle={250}
-                                                        innerRadius={80}
-                                                        outerRadius={110}
-                                                        
-                                                    >
-                                                        <PolarGrid
-                                                        gridType="circle"
-                                                        radialLines={false}
-                                                        stroke="none"
-                                                        className="first:fill-muted last:fill-background"
-                                                        polarRadius={[86, 74]}
-                                                        />
-                                                        <RadialBar dataKey="visitors" background cornerRadius={10} />
-                                                        <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
-                                                        <Label
-                                                            content={({ viewBox }) => {
-                                                            if (viewBox && "cx" in viewBox && "cy" in viewBox) {
-                                                                return (
-                                                                <text
-                                                                    x={viewBox.cx}
-                                                                    y={viewBox.cy}
-                                                                    textAnchor="middle"
-                                                                    dominantBaseline="middle"
-                                                                >
-                                                                    <tspan
-                                                                    x={viewBox.cx}
-                                                                    y={viewBox.cy}
-                                                                    className="fill-foreground text-4xl font-bold"
-                                                                    >
-                                                                    {/* {chartData[0].visitors} */}58%
-                                                                    </tspan>
-
-
-                                                                </text>
-                                                                )
-                                                            }
-                                                            }}
-                                                        />
-                                                        </PolarRadiusAxis>
-                                                    </RadialBarChart>
+                                                        <RadialBarChart
+                                                            data={radialchartData}
+                                                            startAngle={0}
+                                                            endAngle={250}
+                                                            innerRadius={80}
+                                                            outerRadius={110}
+                                                        >
+                                                            <PolarGrid
+                                                                gridType="circle"
+                                                                radialLines={false}
+                                                                stroke="none"
+                                                                className="first:fill-muted last:fill-background"
+                                                                polarRadius={[86, 74]}
+                                                            />
+                                                            {/* Add a RadialBar with a background to highlight the unfilled area */}
+                                                            <RadialBar
+                                                                dataKey="visitors"
+                                                                background={{ fill: "#eee" }} // Set the background color for the unfilled area
+                                                                cornerRadius={10}
+                                                                fill="var(--color-primary)" // Set the fill color for the filled area
+                                                            />
+                                                            <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
+                                                                <Label
+                                                                    content={({ viewBox }) => {
+                                                                        if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                                                                            return (
+                                                                                <text
+                                                                                    x={viewBox.cx}
+                                                                                    y={viewBox.cy}
+                                                                                    textAnchor="middle"
+                                                                                    dominantBaseline="middle"
+                                                                                >
+                                                                                    <tspan
+                                                                                        x={viewBox.cx}
+                                                                                        y={viewBox.cy}
+                                                                                        className="fill-foreground text-4xl font-bold"
+                                                                                    >
+                                                                                        {/* {chartData[0].visitors} */}58%
+                                                                                    </tspan>
+                                                                                </text>
+                                                                            );
+                                                                        }
+                                                                    }}
+                                                                />
+                                                            </PolarRadiusAxis>
+                                                        </RadialBarChart>
                                                     </ChartContainer>
                                                 </CardContent>
                                             </Card>
@@ -561,9 +567,6 @@ const MarketingTools = () => {
                                                     </ChartContainer>
                                                 </CardContent>
                                             </Card>
-
-                                            
- 
                                         </div>
                                     </div>
                                 </div>

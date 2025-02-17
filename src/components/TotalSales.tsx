@@ -29,16 +29,12 @@ import {
 
 
 const chartConfig = {
-    views: {
-        label: "طلبات قيد التنفيذ",
-        // label: "الطلبات المنتهية"
-    },
-    desktop: {
-        label: "Desktop",
+    finished: {
+        label: "الطلبات المنتهية",
         color: "#21D59B",
     },
-    mobile: {
-        label: "Mobile",
+    inProgress: {
+        label: "طلبات قيد التنفيذ",
         color: "#0058FF",
     },
 } satisfies ChartConfig
@@ -132,10 +128,10 @@ export default function TotalSales() {
                         <ChartTooltip
                             content={
                                 <ChartTooltipContent
-                                    className="w-[150px]"
-                                    nameKey="views"
+                                    className="w-[160px]"
+                                    // nameKey="inProgress"
                                     labelFormatter={(value) => {
-                                        return new Date(value).toLocaleDateString("en-US", {
+                                        return new Date(value).toLocaleDateString("ar-EG", {
                                             month: "short",
                                             day: "numeric",
                                             year: "numeric",
@@ -146,17 +142,17 @@ export default function TotalSales() {
                         />
 
                         <Line
-                            dataKey={"mobile"}
+                            dataKey={"inProgress"}
                             type="monotone"
-                            stroke={`var(--color-mobile)`}
+                            stroke={`var(--color-inProgress)`}
                             strokeWidth={2}
                             dot={false}
                         />
 
                         <Line
-                            dataKey={"desktop"}
+                            dataKey={"finished"}
                             type="monotone"
-                            stroke={`var(--color-desktop)`}
+                            stroke={`var(--color-finished)`}
                             strokeWidth={2}
                             dot={false}
                         />
