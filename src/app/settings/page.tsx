@@ -18,7 +18,7 @@ const Settings = () => {
                     <h2 className="font-semibold text-xl">الإعدادات</h2>
                 </div>
 
-                <div className="w-full bg-white rounded-lg shadow-sm py-16 px-10 flex flex-wrap gap-12 column-2">
+                <div className="w-full bg-[var(--background-page-content)] rounded-lg shadow-sm py-16 px-10 flex flex-wrap gap-12 column-2">
                     <div className="flex-1 flex-col flex gap-5">
                         <div className="flex-1">
                             <Link className="border border-[#5E4D9D] text-[#5E4D9D] text-lg rounded-lg py-3 px-4 flex flex-row-reverse items-center justify-between" href="/settings">

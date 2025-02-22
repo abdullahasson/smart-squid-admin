@@ -1,11 +1,10 @@
+// Next
 import Link from "next/link"
+// Data
 import { clients } from "@/utils/data";
-import { FiEdit } from "react-icons/fi";
-// import { AiOutlineDelete } from "react-icons/ai";
-
-// import EditeOnMeeting from "@/components/EditeOnMeeting";
+// Components
 import DeleteClient from "@/components/DeleteClient";
-
+// Shadcn UI
 import {
     Table,
     TableBody,
@@ -14,7 +13,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-
 import {
     Pagination,
     PaginationContent,
@@ -24,11 +22,10 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
-
 import { Label } from "@/components/ui/label";
-
 import { Button } from "@/components/ui/button";
-
+// React Icons
+import { FiEdit } from "react-icons/fi";
 
 
 const AdminClients = () => {

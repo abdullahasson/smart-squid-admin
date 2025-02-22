@@ -39,7 +39,7 @@ export default function RootLayout({
         <div>
           <div className="h-[126px]"></div>
           <Header />
-          <div className="flex flex-row-reverse justify-end bg-[#F4F7FC] h-96 overflow-hidden dashboard-view">
+          <div className="flex flex-row-reverse justify-end bg-[var(--background-page)] h-96 overflow-hidden dashboard-view">
             <Navbar />
             <ScrollArea className="flex-[4]">
               {children}

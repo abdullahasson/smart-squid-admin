@@ -30,7 +30,7 @@ const AdminApplications = () => {
                     <h2 className="font-semibold text-xl">التطبيقات</h2>
                 </div>
 
-                <div className="w-full bg-white rounded-lg shadow-sm py-5">
+                <div className="w-full bg-[var(--background-page-content)] rounded-lg shadow-sm py-5">
                     <div className="flex flex-row items-center justify-between px-4 pb-4">
                         <div></div>
 

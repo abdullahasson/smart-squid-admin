@@ -1,18 +1,21 @@
 "use client"
 
+// Next
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+// Components
+import Logout from "@/components/Logout"
+// Shadcn UI
+import { Badge } from "@/components/ui/badge";
+// React Icons
 import { IoHomeOutline, IoPerson } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
-import { LuLogOut } from "react-icons/lu";
 import { CiSettings } from "react-icons/ci";
-// import { AiOutlineProduct } from "react-icons/ai";
 import { LuShoppingBag , LuMessageCircleReply } from "react-icons/lu";
 import { MdOutlineAppShortcut } from "react-icons/md";
 import { GrCubes } from "react-icons/gr";
 import { TbReportSearch } from "react-icons/tb";
 import { SiGooglemarketingplatform } from "react-icons/si";
-import { Badge } from "@/components/ui/badge";
 
 const Navbar = () => {
 
@@ -30,12 +33,11 @@ const Navbar = () => {
     { name: "API واجهة التطبيقات", href: "/application-interface", icon: <GrCubes /> , notigaction: 0 },
     { name: "الأدوات التسويقية", href: "/marketing-tools", icon: <SiGooglemarketingplatform /> , notigaction: 0 },
     { name: "الأعدادات", href: "/settings", icon: <CiSettings /> , notigaction: 0 },
-    { name: "تسجيل الخروج", href: "/logout", icon: <LuLogOut /> , notigaction: 0 },
   ]
   // style={{clipPath : "polygon(83% 0, 100% 0, 100% 100%, 83% 99%)"}}
   return (
-    <div className="flex-1 h-full relative" >
-      <div className="py-4 bg-white h-screen">
+    <div className="flex-1 h-full relative responsive-navbar" >
+      <div className="py-4 bg-[var(--background-navbar)] h-screen">
         <ul>
           {
             navLinks.map((link, index) => {
@@ -47,23 +49,12 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className={`
-                      flex 
-                      items-center
-                      justify-between
-                      pr-4
-                      pl-2
-                      py-3
-                      w-full 
-                      hover:bg-[#8977cc13] 
-                      hover:text-[#5E4D9D] 
-                      border-r-4 
-                      hover:border-[#5E4D9D] 
-                      transition-all
-                      ${isActive ? "text-[#655c85] bg-[#8977cc13] border-[#5E4D9D]" : ""}
+                      nav-link
+                      ${isActive ? "nav-link-active" : ""}
                     `}
                   >
 
-                    {link.notigaction > 0 ? <Badge className="bg-[#C74D0A]">{link.notigaction}</Badge> : <div></div>}
+                    {link.notigaction > 0 ? <Badge className="bg-[var(--background-navbar-badge)] text-white">{link.notigaction}</Badge> : <div></div>}
                     <div className="flex justify-end font-semibold items-center gap-4">
                       {link.name}
                       {link.icon}
@@ -74,6 +65,10 @@ const Navbar = () => {
               )
             })
           }
+
+          <li>
+            <Logout />
+          </li>
         </ul>
       </div>
     </div>

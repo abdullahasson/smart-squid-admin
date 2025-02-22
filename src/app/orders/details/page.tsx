@@ -1,9 +1,9 @@
+// Next
 import Link from "next/link"
-
+// Components
 import EditeOrder from "@/components/EditeOrder"
 import DeleteOrder from "@/components/DeleteOrder"
-
-
+// Shadcn UI
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -11,8 +11,6 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-
-
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input"
 
@@ -25,7 +23,7 @@ const OrdersDetails = () => {
                     <h2 className="font-semibold text-xl">الطلبات</h2>
                 </div>
 
-                <div className="w-full bg-white rounded-lg shadow-sm py-5">
+                <div className="w-full bg-[var(--background-page-content)] rounded-lg shadow-sm py-5">
                     <div className="flex flex-row items-center justify-between px-4 pb-4">
                         <div></div>
 

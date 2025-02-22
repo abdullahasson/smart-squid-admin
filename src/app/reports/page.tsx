@@ -59,7 +59,7 @@ const AdminReports = () => {
                     <h2 className="font-semibold text-xl">التقارير</h2>
                 </div>
 
-                <div className="w-full bg-white rounded-lg shadow-sm py-5 px-4">
+                <div className="w-full bg-[var(--background-page-content)] rounded-lg shadow-sm py-5 px-4">
                     <div className="flex flex-row items-center justify-between pb-5">
                         <Popover>
                             <PopoverTrigger asChild>

@@ -12,7 +12,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 const Header = () => {
   return (
     <>
-      <header className="w-full bg-white py-4 border-b-1 border-[#6e6e6eb7] fixed top-0 z-50 shadow-sm">
+      <header className="w-full bg-[var(--background-header)] py-4 border-b-1 border-[#6e6e6eb7] fixed top-0 z-50 shadow-sm">
         <div className="container mx-auto flex items-center justify-between">
 
           <div className="flex items-center gap-8">
@@ -28,7 +28,7 @@ const Header = () => {
             <div className="flex items-center gap-2">
               <button className="icon-btn relative">
                 <BsChatDots className="text-xl" />
-                <Badge className="absolute -top-2 -right-2 bg-[#C74D0A]">2</Badge>
+                <Badge className="absolute -top-2 -right-2 bg-[#C74D0A] text-white">2</Badge>
               </button>
               <button className="icon-btn">
                 <IoIosNotificationsOutline className="text-xl" />
