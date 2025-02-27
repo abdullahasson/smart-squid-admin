@@ -24,6 +24,7 @@ const Logout = () => {
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
                 <button className="nav-link">
+                    <div></div>
                     <div className="flex justify-end font-semibold items-center gap-4 w-full">
                         تسجيل الخروج
                         <LuLogOut />
